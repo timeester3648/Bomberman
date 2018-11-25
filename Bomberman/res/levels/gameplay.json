@@ -1,0 +1,64 @@
+{
+
+	"tiles": [
+
+		{
+
+			"x": 0,
+			"y": 0,
+			"model": 2,
+			"hollow": true,
+			"collidable": true,
+
+			"end-index": {
+
+				"x": 10,
+				"y": 10
+
+			},
+
+			"tile-index": {
+
+				"x": 3,
+				"y": 3
+
+			}
+
+		},
+
+		{
+
+			"x": 1,
+			"y": 1,
+			"model": 2,
+			"hollow": false,
+			"other-type": "even",
+			"collidable": true,
+			"explodeable": false,
+
+			"end-index": {
+
+				"x": 9,
+				"y": 9
+
+			},
+
+			"tile-index": {
+
+				"x": 3,
+				"y": 3
+
+			}
+
+		}
+
+	],
+
+	"desired-size": {
+
+		"x": 10,
+		"y": 10
+
+	}
+
+}
