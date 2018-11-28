@@ -34,3 +34,6 @@
 # folders to exclude
 **.vs/
 **x64/
+
+# include the library .lib files
+!lib/*.lib
