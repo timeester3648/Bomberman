@@ -88,9 +88,7 @@ void Server::start() {
 
 				switch (this->event.type) {
 
-					case ENET_EVENT_TYPE_CONNECT:
-
-					{
+					case ENET_EVENT_TYPE_CONNECT: {
 
 						std::ifstream in("res/levels/gameplay.json");
 						std::string lines, line;
@@ -113,9 +111,7 @@ void Server::start() {
 
 					}
 
-					case ENET_EVENT_TYPE_RECEIVE:
-
-					{
+					case ENET_EVENT_TYPE_RECEIVE: {
 
 						/*
 
@@ -192,11 +188,13 @@ void Server::start() {
 
 					}
 
-					case ENET_EVENT_TYPE_DISCONNECT:
+					case ENET_EVENT_TYPE_DISCONNECT: {
 
-						this->event.peer->data = NULL;
+						this->event.peer->data = nullptr;
 
 						break;
+
+					}
 
 				}
 

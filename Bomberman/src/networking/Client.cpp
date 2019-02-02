@@ -79,13 +79,13 @@ void Client::start() {
 
 				switch (this->event.type) {
 
-					case ENET_EVENT_TYPE_CONNECT:
+					case ENET_EVENT_TYPE_CONNECT: {
 
 						break;
 
-					case ENET_EVENT_TYPE_RECEIVE:
+					}
 
-					{
+					case ENET_EVENT_TYPE_RECEIVE: {
 
 						/*
 
@@ -166,15 +166,17 @@ void Client::start() {
 
 						enet_packet_destroy(this->event.packet);
 
+						break;
+
 					}
 
-					break;
+					case ENET_EVENT_TYPE_DISCONNECT: {
 
-					case ENET_EVENT_TYPE_DISCONNECT:
-
-						event.peer->data = NULL;
+						this->event.peer->data = nullptr;
 
 						break;
+
+					}
 
 				}
 
