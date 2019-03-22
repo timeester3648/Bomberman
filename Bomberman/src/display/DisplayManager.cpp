@@ -12,7 +12,7 @@ void DisplayManager::error_callback(int error, const char* description) {
 
 void DisplayManager::createDisplay() {
 
-	window = (new EOUL::GL::Window(1080, (1080 / 16) * 9, "Bomberman"))->setSwapInterval(0)->setResizable(true);
+	window = (new EOUL::GL::Window(1080, (1080 / 16) * 9, "Bomberman"))->setSwapInterval(1)->setResizable(true);
 
 	window->addIcons({ "res/icon.png", "res/icon_small.png", "res/icon_tiny.png", "res/icon_miniscule.png" });
 

@@ -1,23 +1,24 @@
-#include "../header/handler/KeyboardHandler.h"
-#include "../header/display/DisplayManager.h"
-#include "../header/objects/TexturedModel.h"
-#include "../header/handler/RenderHandler.h"
-#include "../header/handler/ModelHandler.h"
-#include "../header/handler/MouseHandler.h"
-#include "../header/handler/AudioHandler.h"
-#include "../header/handler/FontHandler.h"
-#include "../header/game/ScoreManager.h"
-#include "../header/level/LevelLoader.h"
-#include "../header/game/GameManager.h"
-#include "../header/level/Explosion.h"
-#include "../header/util/MathHelper.h"
-#include "../header/loading/Loader.h"
-#include "../header/game/GameSaver.h"
-#include "../header/entity/Player.h"
-#include "../header/objects/Tile.h"
-#include "../header/text/Label.h"
-#include "../header/level/Bomb.h"
-#include "../header/Main.h"
+#include "handler/KeyboardHandler.h"
+#include "display/DisplayManager.h"
+#include "objects/TexturedModel.h"
+#include "handler/RenderHandler.h"
+#include "handler/ModelHandler.h"
+#include "handler/MouseHandler.h"
+#include "handler/AudioHandler.h"
+#include "handler/FontHandler.h"
+#include "game/ScoreManager.h"
+#include "level/LevelLoader.h"
+#include "game/GameManager.h"
+#include "level/Explosion.h"
+#include "util/MathHelper.h"
+#include "loading/Loader.h"
+#include "game/GameSaver.h"
+#include "entity/Player.h"
+#include "objects/Tile.h"
+#include "text/Label.h"
+#include "mod/ModAPI.h"
+#include "level/Bomb.h"
+#include "Main.h"
 
 #define clock std::chrono::high_resolution_clock
 #define print(x) std::cout << x << std::endl
@@ -45,6 +46,9 @@ int main() {
 	}
 
 	atexit(enet_deinitialize);
+
+	ModAPI::loadMods();
+	ModAPI::registerMods();
 
 	DisplayManager::createDisplay();
 	ModelHandler::init();
@@ -98,6 +102,9 @@ int main() {
 		}
 
 	}
+
+	ModAPI::unregisterMods();
+	ModAPI::cleanUp();
 
 	Loader::cleanUp();
 	GameManager::cleanUp();
