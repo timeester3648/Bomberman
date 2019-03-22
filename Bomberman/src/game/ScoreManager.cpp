@@ -1,9 +1,5 @@
 #include "../../header/game/ScoreManager.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 unsigned int ScoreManager::score_player_0 = 0;
 unsigned int ScoreManager::high_score_player_0 = 0;
 unsigned int ScoreManager::latest_score_player_0 = 0;

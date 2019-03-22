@@ -1,10 +1,6 @@
 #include "../../../header/shaders/uniform/Uniform.h"
 #include "../../../header/shaders/ShaderProgram.h"
 
-#include <iostream>
-#include <GLFW\glfw3.h>
-
-#define print(x) std::cout << x << std::endl
 #define error(x) std::cerr << x << std::endl
 
 Uniform::Uniform(String name) : name(name) {

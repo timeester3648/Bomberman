@@ -11,11 +11,6 @@
 #include "../../header/networking/packet/BombPacket.h"
 #include "../../header/Main.h"
 
-#include <GLFW/glfw3.h>
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 Player::Player(Vec3 pos, Vec2 offset, Rotation rotation, TexturedModel& model, ControlType type) : Entity(pos, rotation, model), type(type) {
 
 	if (this->type == ControlType::Arrows) {
@@ -343,7 +338,7 @@ void Player::activate_controls() {
 
 	for (auto& control : this->controls) {
 
-		if (glfwGetKey(DisplayManager::window, control.key)) {
+		if (DisplayManager::window->isKeyDown(control.key)) {
 
 			control.activated = true;
 

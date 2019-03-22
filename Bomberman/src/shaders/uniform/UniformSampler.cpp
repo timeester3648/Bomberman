@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformSampler.h"
 
-#include <GLFW\glfw3.h>
-
 UniformSampler::UniformSampler(String name) : Uniform(name) {
 
 }

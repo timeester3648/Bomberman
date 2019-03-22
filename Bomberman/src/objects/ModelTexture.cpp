@@ -1,7 +1,5 @@
 #include "../../header/objects/ModelTexture.h"
 
-#include <iostream>
-
 ModelTexture::ModelTexture(GLuint id) : id(id) {
 
 }

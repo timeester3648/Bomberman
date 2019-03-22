@@ -6,10 +6,6 @@
 #include "../../header/level/Bomb.h"
 #include "../../header/Main.h"
 
-#include <EOUL\Maths.h>
-
-using namespace EOUL::Math;
-
 Client::Client(std::string host, int port) : host(host), port(port) {
 
 	if (host.length() == 0) {

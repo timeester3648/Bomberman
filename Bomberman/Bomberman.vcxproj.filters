@@ -162,9 +162,6 @@
     <ClCompile Include="src\handler\AudioHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\sound\Sound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\text\Font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -214,6 +211,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\handler\KeyboardHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mod\ModAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -410,9 +413,6 @@
     <ClInclude Include="header\handler\AudioHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\sound\Sound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -480,6 +480,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\handler\KeyboardHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\mod\ModAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,11 +7,6 @@
 #include "../../header/level/Bomb.h"
 #include "../../header/Main.h"
 
-#include <fstream>
-#include <EOUL\Maths.h>
-
-using namespace EOUL::Math;
-
 Server::Server(std::string host, int port, int max_clients) {
 	
 	if (host != "localhost") {

@@ -1,7 +1,6 @@
 #pragma once
 
-#include "File.h"
-
+#include <EOUL\File.h>
 #include <string>
 #include <fstream>
 #include <vector>
@@ -33,6 +32,10 @@ namespace EOUL {
 					char* ptr;
 					size_t size;
 
+					SaveQueue(char* ptr, size_t size) : ptr(ptr), size(size) {
+
+					}
+
 				};
 
 				std::vector<SaveQueue> queued;
@@ -45,14 +48,14 @@ namespace EOUL {
 			public:
 
 				/* saves data to the file */
-				void save(char* data, unsigned long long dataSize, bool addToFile = false) const;
+				void save(char* data, size_t dataSize, bool addToFile = false) const;
 				/* saves data to the file */
 				void save(SaveData& data, bool addToFile = false) const;
 
 				/* adds save queue entry to be saved later */
-				void save_queued(char* data, unsigned long long dataSize);
+				void saveQueued(char* data, size_t dataSize);
 				/* saves all queued save entries */
-				void save_all_queued();
+				void saveAllQueued();
 
 				/* returns a vector of all saved data */
 				std::vector<SaveData> readData() const;

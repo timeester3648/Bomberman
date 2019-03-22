@@ -1,6 +1,5 @@
 #pragma once
 
-#include <EOUL\compile dependencies\Error.h>
 #include <EOUL\File.h>
 #include <string>
 
@@ -12,11 +11,8 @@ namespace EOUL {
 
 			private:
 
-				unsigned char* pixels;
-
-			public:
-
-				unsigned int width, height, numComponents;
+				unsigned char* pixels = nullptr;
+				unsigned int width = 0, height = 0, numComponents = 0;
 
 			public:
 
@@ -26,17 +22,25 @@ namespace EOUL {
 
 			public:
 
-				/* returns the red channel with a scale from 0 - 255, of the specified pixel */
-				unsigned char getRed(int x, int y) const;
-				/* returns the green channel with a scale from 0 - 255, of the specified pixel */
-				unsigned char getGreen(int x, int y) const;
-				/* returns the blue channel with a scale from 0 - 255, of the specified pixel */
-				unsigned char getBlue(int x, int y) const;
-				/* returns the alpha channel with a scale from 0 - 255, of the specified pixel */
-				unsigned char getAlpha(int x, int y) const;
+				/* loads/reloads image and deletes current pixel data */
+				void load();
 
-				/* returns an integer representation of the rgba values, of the specified pixel */
-				unsigned int getRGBA(int x, int y) const;
+				/* returns the red channel with a scale from 0 - 255, of the specified pixel */
+				unsigned char getRed(unsigned int x, unsigned int y) const;
+				/* returns the green channel with a scale from 0 - 255, of the specified pixel */
+				unsigned char getGreen(unsigned int x, unsigned int y) const;
+				/* returns the blue channel with a scale from 0 - 255, of the specified pixel */
+				unsigned char getBlue(unsigned int x, unsigned int y) const;
+				/* returns the alpha channel with a scale from 0 - 255, of the specified pixel */
+				unsigned char getAlpha(unsigned int x, unsigned int y) const;
+				/* returns an unsigned integer representation of the rgba values, of the specified pixel */
+				unsigned int getRGBA(unsigned int x, unsigned int y) const;
+
+				/* returns width of the image */
+				unsigned int getWidth() const;
+				/* returns height of the image */
+				unsigned int getHeight() const;
+
 				/* returns a pointer to the pixel array */
 				unsigned char* getPixels() const;
 

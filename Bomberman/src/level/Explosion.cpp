@@ -3,10 +3,6 @@
 #include "../../header/level/Level.h"
 #include "../../header/level/Bomb.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 Explosion::Explosion(Vec3 position, int timeLeft, Bomb* bomb) : Tile(position, *ModelHandler::getModelById(1)), timeLeft(timeLeft), start(timeLeft), bomb(bomb) {
 
 }

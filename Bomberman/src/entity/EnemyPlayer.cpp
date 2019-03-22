@@ -10,11 +10,6 @@
 #include "../../header/handler/AudioHandler.h"
 #include "../../header/Main.h"
 
-#include <GLFW/glfw3.h>
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 EnemyPlayer::EnemyPlayer(Vec3 pos, Vec2 offset, Rotation rotation, TexturedModel& model) : Entity(pos, rotation, model) {
 
 	this->ghost_player = { pos, offset, rotation };

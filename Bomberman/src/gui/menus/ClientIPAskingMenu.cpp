@@ -10,17 +10,13 @@
 #include "../../../header/handler/FontHandler.h"
 #include "../../../header/Main.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 ClientIPAskingMenu::ClientIPAskingMenu() {
 
-	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::width * .5f, DisplayManager::height * .2f }), { .6f, .25f }));
+	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() * .2f }), { .6f, .25f }));
 
-	this->labels.push_back(new Label("IP:", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .45f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back(new Label("", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back((new TextButton("Go back", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .65f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
+	this->labels.push_back(new Label("IP:", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .45f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back((new TextButton("Go back", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .65f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
 
 }
 

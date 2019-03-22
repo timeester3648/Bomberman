@@ -10,10 +10,6 @@
 #include "../../header/handler/AudioHandler.h"
 #include "../../header/Main.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 Bomb::Bomb(Vec3 position, int timeLeft, Player* player) : Tile(position, *ModelHandler::getModelById(3)), timeLeft(timeLeft), player(player) {
 
 	AudioHandler::bomb_place->stop();

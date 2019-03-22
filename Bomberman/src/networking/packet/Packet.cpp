@@ -1,9 +1,5 @@
 #include "../../../header/networking/packet/Packet.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 Packet::Packet(PacketType packet_type, char* data, size_t size) : packet_type(packet_type) {
 
 	char* packet_data = new char[size + 1]();

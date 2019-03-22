@@ -3,11 +3,6 @@
 #include "../../../header/handler/ModelHandler.h"
 #include "../../../header/display/DisplayManager.h"
 
-#include <iostream>
-#include <EOUL\Maths.h>
-
-#define print(x) std::cout << x << std::endl
-
 TileRenderer::TileRenderer(StaticShader& shader) : shader(shader) {
 
 	createProjectionMatrix();
@@ -187,8 +182,8 @@ void TileRenderer::prepareInstance(const Tile& tile) {
 
 void TileRenderer::createProjectionMatrix() {
 
-	float aspectRatio = (float) DisplayManager::width / (float) DisplayManager::height;
-    float y_scale = (float) ((1.0f / tan(EOUL::Math::radians(FOV / 2.0f))) * aspectRatio);
+	float aspectRatio = (float) DisplayManager::window->getAspectRatio();
+    float y_scale = (float) ((1.0f / tan(radians(FOV / 2.0f))) * aspectRatio);
     float x_scale = y_scale / aspectRatio;
     float frustum_length = FAR_PLANE - NEAR_PLANE;
  

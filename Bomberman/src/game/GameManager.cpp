@@ -9,9 +9,6 @@
 #include "../../header/game/GameSaver.h"
 #include "../../header/Main.h"
 
-#define EOUL_USE_GLFW_INPUT
-#include <EOUL\Utils.h>
-
 GameManager& GameManager::getManager() {
 
 	static GameManager manager;
@@ -44,8 +41,6 @@ void GameManager::chooseMenu() {
 
 	delete client;
 	delete server;
-	//delete player;
-	//delete enemy_player;
 
 	client = nullptr;
 	server = nullptr;

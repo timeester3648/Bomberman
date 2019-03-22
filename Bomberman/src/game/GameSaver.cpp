@@ -1,9 +1,6 @@
 #include "../../header/game/GameSaver.h"
 #include "../../header/game/ScoreManager.h"
 
-#define EOUL_USE_ALL
-#include <EOUL.h>
-
 String GameSaver::path = "gamedata.dat";
 
 void GameSaver::saveGame() {
@@ -12,12 +9,12 @@ void GameSaver::saveGame() {
 
 	save.remove();
 
-	save.save_queued((char*) &ScoreManager::high_score_player_0, sizeof(ScoreManager::high_score_player_0));
-	save.save_queued((char*) &ScoreManager::high_score_player_1, sizeof(ScoreManager::high_score_player_1));
-	save.save_queued((char*) &ScoreManager::latest_score_player_0, sizeof(ScoreManager::latest_score_player_0));
-	save.save_queued((char*) &ScoreManager::latest_score_player_1, sizeof(ScoreManager::latest_score_player_1));
+	save.saveQueued((char*) &ScoreManager::high_score_player_0, sizeof(ScoreManager::high_score_player_0));
+	save.saveQueued((char*) &ScoreManager::high_score_player_1, sizeof(ScoreManager::high_score_player_1));
+	save.saveQueued((char*) &ScoreManager::latest_score_player_0, sizeof(ScoreManager::latest_score_player_0));
+	save.saveQueued((char*) &ScoreManager::latest_score_player_1, sizeof(ScoreManager::latest_score_player_1));
 
-	save.save_all_queued();
+	save.saveAllQueued();
 
 }
 

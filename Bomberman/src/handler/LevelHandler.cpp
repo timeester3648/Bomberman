@@ -4,10 +4,6 @@
 #include "../../header/level/Bomb.h"
 #include "../../header/level/Explosion.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 void LevelHandler::updateBombs(Level* level) {
 
 	for (int i = (int) level->tiles[ModelHandler::getModelById(3)].size() - 1; i >= 0; i--) {

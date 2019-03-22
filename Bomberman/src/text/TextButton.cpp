@@ -4,13 +4,6 @@
 #include "../../header/util/MathHelper.h"
 #include "../../header/handler/AudioHandler.h"
 
-#include <EOUL\Maths.h>
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
-using namespace EOUL::Math;
-
 GLFWcursor* TextButton::hand;
 GLFWcursor* TextButton::arrow;
 
@@ -31,14 +24,14 @@ void TextButton::update(TextRenderer* renderer, std::vector<Label*>& labels) {
 	float width = font->getWidth(this->text);
 	float height = font->getHeight(this->text);
 
-	width = (float) map(width, 0, DisplayManager::width, 0, 2.0f);
-	height = (float) map(height, 0, DisplayManager::height, 0, 2.0f);
+	width = (float) map(width, 0, DisplayManager::window->getWidth(), 0, 2.0f);
+	height = (float) map(height, 0, DisplayManager::window->getHeight(), 0, 2.0f);
 
-	if (mouse.x >= MathHelper::windowToGLFWCoord({ this->position.x, 0 }).x - width * .5f && mouse.x <= MathHelper::windowToGLFWCoord({ this->position.x, 0 }).x + width * .5f && mouse.y >= MathHelper::windowToGLFWCoord({ 0, DisplayManager::height - this->position.y }).y - height * .15f && mouse.y <= MathHelper::windowToGLFWCoord({ 0, DisplayManager::height - this->position.y }).y + height && !outsideNclicked) {
+	if (mouse.x >= MathHelper::windowToGLFWCoord({ this->position.x, 0 }).x - width * .5f && mouse.x <= MathHelper::windowToGLFWCoord({ this->position.x, 0 }).x + width * .5f && mouse.y >= MathHelper::windowToGLFWCoord({ 0, DisplayManager::window->getHeight() - this->position.y }).y - height * .15f && mouse.y <= MathHelper::windowToGLFWCoord({ 0, DisplayManager::window->getHeight() - this->position.y }).y + height && !outsideNclicked) {
 
 		this->over = true;
 
-		glfwSetCursor(DisplayManager::window, hand);
+		DisplayManager::window->setCursor(hand);
 
 		if (!MouseHandler::mouseDown && this->holding) {
 
@@ -87,7 +80,7 @@ void TextButton::update(TextRenderer* renderer, std::vector<Label*>& labels) {
 
 		if (buttons == overs) {
 
-			glfwSetCursor(DisplayManager::window, arrow);
+			DisplayManager::window->setCursor(hand);
 
 		}
 

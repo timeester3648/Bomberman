@@ -30,12 +30,11 @@ namespace EOUL {
 
 				bool safeMode;
 
-			public:
-
-				unsigned char& r = this->storage.r;
-				unsigned char& g = this->storage.g;
 				unsigned char& b = this->storage.b;
+				unsigned char& g = this->storage.g;
+				unsigned char& r = this->storage.r;
 				unsigned char& a = this->storage.a;
+				unsigned int& decimal = this->storage.decimal;
 
 			public:
 
@@ -64,6 +63,17 @@ namespace EOUL {
 
 				/* returns the hex representation of the color */
 				std::string getHex() const;
+
+				/* sets r, g, b and a values with an unsigned int */
+				void setRGBA(unsigned int rgba);
+				/* sets the r value */
+				void setRed(unsigned char red);
+				/* sets the g value */
+				void setGreen(unsigned char green);
+				/* sets the b value */
+				void setBlue(unsigned char blue);
+				/* sets the a value */
+				void setAlpha(unsigned char alpha);
 
 			public:
 

@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformVec4.h"
 
-#include <GLFW\glfw3.h>
-
 UniformVec4::UniformVec4(String name) : Uniform(name) {
 
 }

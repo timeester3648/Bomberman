@@ -1,7 +1,10 @@
 #pragma once
 
-#include <string>
+#define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+#undef WIN32_LEAN_AND_MEAN
+
+#include <string>
 
 namespace EOUL {
 
@@ -23,12 +26,17 @@ namespace EOUL {
 			public:
 
 				/* Keep arguments empty if the exe has the same name as the window, returns the base adress of the application */
-				unsigned long long getBaseAdress(std::string customExeName = "") const;
+				size_t getBaseAdress(std::string customExeName = "") const;
 
 				/* writes data to the given menory adress */
-				void writeMemory(unsigned long long adress, void* data, unsigned long long size) const;
+				void writeMemory(size_t adress, void* data, size_t size) const;
 				/* reads data from the given menory adress */
-				void readMemory(unsigned long long adress, void* buffer, unsigned long long size) const;
+				void readMemory(size_t adress, void* buffer, size_t size) const;
+
+				/* writes data to the given menory adress */
+				void writeMemory(void* adress, void* data, size_t size) const;
+				/* reads data from the given menory adress */
+				void readMemory(void* adress, void* buffer, size_t size) const;
 
 		};
 

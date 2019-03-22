@@ -9,10 +9,6 @@
 #include "../../header/gui/menus/HostWaitingMenu.h"
 #include "../../header/gui/menus/ClientIPAskingMenu.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 RenderHandler::RenderHandler() : levelRenderer(staticShader), textRenderer(TextRenderer(textShader)) {
 
 	this->menus.push_back(new MainMenu());

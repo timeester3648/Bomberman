@@ -1,7 +1,5 @@
 #include "../../header/objects/RawModel.h"
 
-#include <iostream>
-
 RawModel::RawModel(GLuint vaoID, GLuint vertexCount) : vaoID(vaoID), vertexCount(vertexCount) {
 
 }

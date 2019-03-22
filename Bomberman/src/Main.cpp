@@ -19,12 +19,6 @@
 #include "../header/level/Bomb.h"
 #include "../header/Main.h"
 
-#define EOUL_USE_ALL
-#include <EOUL.h>
-#include <iostream>
-#include <chrono>
-#include <ctime>
-
 #define clock std::chrono::high_resolution_clock
 #define print(x) std::cout << x << std::endl
 
@@ -67,7 +61,7 @@ int main() {
 	glClearColor((GLclampf) map(168, 0, 255, 0, 1), (GLclampf) map(159, 0, 255, 0, 1), (GLclampf) map(150, 0, 255, 0, 1), 1.0f);
 	glEnable(GL_MULTISAMPLE);
 
-	while (!glfwWindowShouldClose(DisplayManager::window)) {
+	while (!DisplayManager::window->shouldClose()) {
 
 		auto now = clock::now();
 
@@ -83,22 +77,23 @@ int main() {
 
 		}
 
-		if (!glfwWindowShouldClose(DisplayManager::window)) {
+		if (!DisplayManager::window->shouldClose()) {
 
 			glClear(GL_COLOR_BUFFER_BIT);
 
 #if false
 
-			if (glfwGetKey(DisplayManager::window, GLFW_KEY_ESCAPE) == GL_TRUE) {
+			if (DisplayManager::window->isKeyDown(GLFW_KEY_ESCAPE)) {
 
-				glfwSetWindowShouldClose(DisplayManager::window, GL_TRUE);
+				DisplayManager::window->close();
 
 			}
 
 #endif
 
 			GameManager::render();
-			DisplayManager::updateDisplay();
+
+			DisplayManager::window->update();
 
 		}
 
@@ -108,6 +103,6 @@ int main() {
 	GameManager::cleanUp();
 	AudioHandler::cleanUp();
 	ModelHandler::cleanUp();
-	DisplayManager::closeDisplay();
+	DisplayManager::cleanUp();
 
 }

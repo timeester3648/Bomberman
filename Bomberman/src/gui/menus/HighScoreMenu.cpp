@@ -8,24 +8,20 @@
 #include "../../../header/game/ScoreManager.h"
 #include "../../../header/handler/FontHandler.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 HighScoreMenu::HighScoreMenu() {
 
-	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::width * .5f, DisplayManager::height * .2f }), { .6f, .25f }));
+	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() * .2f }), { .6f, .25f }));
 
-	this->labels.push_back(new Label("Player 0:", { DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .35f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back(new Label("Player 1:", { DisplayManager::width - DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .35f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("Player 0:", { DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .35f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("Player 1:", { DisplayManager::window->getWidth() - DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .35f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
 
-	this->labels.push_back(new Label("", { DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .45f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back(new Label("", { DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .45f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
 
-	this->labels.push_back(new Label("", { DisplayManager::width - DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .45f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back(new Label("", { DisplayManager::width - DisplayManager::width * .2f, DisplayManager::height - DisplayManager::height * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() - DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .45f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() - DisplayManager::window->getWidth() * .2f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }));
 
-	this->labels.push_back((new TextButton("Go Back", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .75f }, FontHandler::getFont("Bomberman", 36.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
+	this->labels.push_back((new TextButton("Go Back", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .75f }, FontHandler::getFont("Bomberman", 36.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
 
 }
 
@@ -33,7 +29,7 @@ void HighScoreMenu::goBack() {
 
 	GameManager::getManager().state = GameManager::getManager().previousState;
 
-	glfwSetCursor(DisplayManager::window, TextButton::arrow);
+	DisplayManager::window->setCursor(TextButton::arrow);
 
 }
 

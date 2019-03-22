@@ -1,10 +1,6 @@
 #include "../../header/shaders/StaticShader.h"
 #include "../../header/util/MathHelper.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 StaticShader::StaticShader() : ShaderProgram("src/shaders/files/vertexShader.vert", "src/shaders/files/fragmentShader.frag") {
 
 	init();

@@ -2,14 +2,6 @@
 #include "../../header/handler/ModelHandler.h"
 #include "../../header/game/TileProperties.h"
 
-#include <rapidjson/document.h>
-#include <EOUL\Maths.h>
-#include <fstream>
-#include <iostream>
-#include <random>
-
-#define print(x) std::cout << x << std::endl
-
 Level* LevelLoader::loadLevel(String json, bool content) {
 
 	Level* level = new Level();

@@ -93,9 +93,12 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -109,9 +112,12 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -127,11 +133,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -147,11 +156,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;SimpleAudioLibrary.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -180,14 +192,20 @@
     <ClCompile Include="src\handler\FontHandler.cpp" />
     <ClCompile Include="src\handler\KeyboardHandler.cpp" />
     <ClCompile Include="src\handler\NetworkHandler.cpp" />
+    <ClCompile Include="src\mod\ModAPI.cpp" />
     <ClCompile Include="src\networking\Client.cpp" />
     <ClCompile Include="src\networking\packet\BombPacket.cpp" />
     <ClCompile Include="src\networking\packet\LevelPacket.cpp" />
     <ClCompile Include="src\networking\packet\Packet.cpp" />
     <ClCompile Include="src\networking\packet\PlayerPacket.cpp" />
     <ClCompile Include="src\networking\Server.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\shaders\TextShader.cpp" />
-    <ClCompile Include="src\sound\Sound.cpp" />
     <ClCompile Include="src\text\Font.cpp" />
     <ClCompile Include="src\text\Label.cpp" />
     <ClCompile Include="src\text\TextButton.cpp" />
@@ -264,14 +282,15 @@
     <ClInclude Include="header\handler\KeyboardHandler.h" />
     <ClInclude Include="header\handler\NetworkHandler.h" />
     <ClInclude Include="header\Main.h" />
+    <ClInclude Include="header\mod\ModAPI.h" />
     <ClInclude Include="header\networking\Client.h" />
     <ClInclude Include="header\networking\packet\BombPacket.h" />
     <ClInclude Include="header\networking\packet\LevelPacket.h" />
     <ClInclude Include="header\networking\packet\Packet.h" />
     <ClInclude Include="header\networking\packet\PlayerPacket.h" />
     <ClInclude Include="header\networking\Server.h" />
+    <ClInclude Include="header\pch.h" />
     <ClInclude Include="header\shaders\TextShader.h" />
-    <ClInclude Include="header\sound\Sound.h" />
     <ClInclude Include="header\text\Font.h" />
     <ClInclude Include="header\text\Label.h" />
     <ClInclude Include="header\text\TextButton.h" />

@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformInt.h"
 
-#include <GLFW\glfw3.h>
-
 UniformInt::UniformInt(String name) : Uniform(name) {
 
 }

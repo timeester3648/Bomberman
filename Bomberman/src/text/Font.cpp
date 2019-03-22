@@ -2,8 +2,6 @@
 #include "../../header/loading/texture/TextureLoader.h"
 #include "../../header/display/DisplayManager.h"
 
-#include <freetype-gl\freetype-gl.h>
-
 Font::Font(File file, float size, bool preload) : file(std::move(file)), size(size), preloaded(preload) {
 
 	this->atlas = ftgl::texture_atlas_new(512, 512, 1);
@@ -37,7 +35,7 @@ Font::Font(File file, float size, bool preload) : file(std::move(file)), size(si
 
 	}
 
-	this->setWindowSize(DisplayManager::width, DisplayManager::height);
+	this->setWindowSize(DisplayManager::window->getWidth(), DisplayManager::window->getHeight());
 
 }
 

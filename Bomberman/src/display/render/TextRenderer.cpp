@@ -3,12 +3,6 @@
 #include "../../../header/display/DisplayManager.h"
 #include "../../../header/text/Label.h"
 
-#include <freetype-gl\freetype-gl.h>
-#include <EOUL\Maths.h>
-#include <Windows.h>
-
-using namespace EOUL::Math;
-
 namespace {
 
 	typedef struct {

@@ -8,18 +8,14 @@
 #include "../../../header/game/ScoreManager.h"
 #include "../../../header/handler/FontHandler.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 LocalWonMenu::LocalWonMenu() {
 
-	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::width * .5f, DisplayManager::height * .2f }), { .6f, .25f }));
+	this->guis.push_back(new Gui(Loader::loadTexture("header"), MathHelper::windowToGLFWCoord({ DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() * .2f }), { .6f, .25f }));
 
-	this->labels.push_back(new Label("", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .4f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
-	this->labels.push_back((new TextButton("Play again", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .5f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(startOver));
-	this->labels.push_back((new TextButton("See scores", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(watchScores));
-	this->labels.push_back((new TextButton("Go back", { DisplayManager::width * .5f, DisplayManager::height - DisplayManager::height * .6f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
+	this->labels.push_back(new Label("", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .4f }, FontHandler::getFont("Bomberman", 24.0f), { 0, 0, 0, 1 }));
+	this->labels.push_back((new TextButton("Play again", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .5f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(startOver));
+	this->labels.push_back((new TextButton("See scores", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .55f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(watchScores));
+	this->labels.push_back((new TextButton("Go back", { DisplayManager::window->getWidth() * .5f, DisplayManager::window->getHeight() - DisplayManager::window->getHeight() * .6f }, FontHandler::getFont("Bomberman", 16.0f), { 0, 0, 0, 1 }))->setCallback(goBack));
 
 }
 
@@ -33,7 +29,7 @@ void LocalWonMenu::startOver() {
 
 	GameManager::restart();
 
-	glfwSetCursor(DisplayManager::window, TextButton::arrow);
+	DisplayManager::window->setCursor(TextButton::arrow);
 
 }
 
@@ -42,7 +38,7 @@ void LocalWonMenu::watchScores() {
 	GameManager::getManager().previousState = GameState::LocalWon;
 	GameManager::getManager().state = GameState::Highscores;
 
-	glfwSetCursor(DisplayManager::window, TextButton::arrow);
+	DisplayManager::window->setCursor(TextButton::arrow);
 
 }
 

@@ -1,24 +1,16 @@
 #include "../../header/handler/AudioHandler.h"
 
-Sound *AudioHandler::button, *AudioHandler::bomb_place, *AudioHandler::bomb_explode, *AudioHandler::win, *AudioHandler::die;
+AudioEntity *AudioHandler::button, *AudioHandler::bomb_place, *AudioHandler::bomb_explode, *AudioHandler::win, *AudioHandler::die;
 
 void AudioHandler::init() {
 
-	getSystem().initWithDefaultDevice();
+	SoundSystem::init();
 
-	win = new Sound("win");
-	button = new Sound("select");
-	bomb_place = new Sound("bomb_place");
-	bomb_explode = new Sound("bomb_explode");
-	die = new Sound("die");
-
-}
-
-SimpleAudioLib::CoreSystem& AudioHandler::getSystem() {
-
-	static SimpleAudioLib::CoreSystem& system = SimpleAudioLib::CoreSystem::getInstance();
-
-	return system;
+	win = SoundSystem::loadToAudioEntity("res/sounds/win.wav", SoundSystem::FileType::WavFile);
+	button = SoundSystem::loadToAudioEntity("res/sounds/select.wav", SoundSystem::FileType::WavFile);
+	bomb_place = SoundSystem::loadToAudioEntity("res/sounds/bomb_place.wav", SoundSystem::FileType::WavFile);
+	bomb_explode = SoundSystem::loadToAudioEntity("res/sounds/bomb_explode.wav", SoundSystem::FileType::WavFile);
+	die = SoundSystem::loadToAudioEntity("res/sounds/die.wav", SoundSystem::FileType::WavFile);
 
 }
 
@@ -30,6 +22,6 @@ void AudioHandler::cleanUp() {
 	delete bomb_place;
 	delete bomb_explode;
 
-	SimpleAudioLib::CoreSystem::release();
+	SoundSystem::release();
 
 }

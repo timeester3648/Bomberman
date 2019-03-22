@@ -1,9 +1,5 @@
-#include "../../header/handler/CollisionHandler.h"
-#include "../../header/handler/TileProperties.h"
-
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
+#include "handler/CollisionHandler.h"
+#include "game/TileProperties.h"
 
 std::vector<OBB> CollisionHandler::obbs = std::vector<OBB>();
 

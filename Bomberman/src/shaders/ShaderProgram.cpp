@@ -1,11 +1,6 @@
 #include "../../header/shaders/ShaderProgram.h"
 #include "../../header/game/BuildType.h"
 
-#include <glm\glm.hpp>
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 #ifdef BUILD_EXE		
 	#pragma comment(linker, "/subsystem:windows /entry:mainCRTStartup")
 #endif

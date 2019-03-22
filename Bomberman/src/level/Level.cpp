@@ -3,11 +3,6 @@
 #include "../../header/handler/ModelHandler.h"
 #include "../../header/handler/CollisionHandler.h"
 
-#include <EOUL\Maths.h>
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 void Level::addTile(Tile* tile) {
 
 	tile->level = this;

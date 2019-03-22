@@ -12,7 +12,7 @@ namespace EOUL {
 
 	namespace Util {
 
-		#ifndef EOUL_USE_GLFW_INPUT
+#ifndef EOUL_USE_GLFW_INPUT
 			
 			/* returns if the given key is down */
 			inline bool isKeyDown(int key) {
@@ -28,7 +28,7 @@ namespace EOUL {
 
 			}
 
-		#else
+#else
 
 			/* returns if the given key is down */
 			inline bool isKeyDown(GLFWwindow* window, int key) {
@@ -44,14 +44,21 @@ namespace EOUL {
 
 			}
 
-		#endif
+#endif
 
-		/* returns how much physical ram is free */
-		unsigned long long ramFree();
-		/*  returns how much physical ram is used */
-		unsigned long long ramUsed();
-		/* returns how much physical ram is used by current process */
-		unsigned long long ramUsedByCurrent();
+		enum MemoryType {
+
+			Physical,
+			Virtual
+
+		};
+
+		/* returns how much ram is free */
+		size_t ramFree(MemoryType type = MemoryType::Physical);
+		/*  returns how much ram is used */
+		size_t ramUsed(MemoryType type = MemoryType::Physical);
+		/* returns how much ram is used by current process */
+		size_t ramUsedByCurrent();
 
 	}
 

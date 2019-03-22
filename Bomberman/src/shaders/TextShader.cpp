@@ -1,9 +1,5 @@
 #include "../../header/shaders/TextShader.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 TextShader::TextShader() : ShaderProgram("src/shaders/files/textVertexShader.vert", "src/shaders/files/textFragmentShader.frag") {
 
 	init();

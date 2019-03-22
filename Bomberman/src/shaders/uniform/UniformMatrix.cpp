@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformMatrix.h"
 
-#include <GLFW\glfw3.h>
-
 UniformMatrix::UniformMatrix(String name) : Uniform(name) {
 
 }

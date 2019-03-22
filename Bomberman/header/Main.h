@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 #include "networking\Client.h"
 #include "networking\Server.h"
 #include "entity\EnemyPlayer.h"

@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformBool.h"
 
-#include <GLFW\glfw3.h>
-
 UniformBool::UniformBool(String name) : Uniform(name) {
 
 }

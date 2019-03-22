@@ -2,12 +2,6 @@
 #include "../../header/display/DisplayManager.h"
 #include "../../header/game/GameManager.h"
 
-#include <glm\gtx\transform.hpp>
-#include <EOUL\Maths.h>
-#include <iostream>
-
-using namespace EOUL::Math;
-
 glm::mat4 MathHelper::createTransformationMatrix(glm::vec3 translation, float rx, float ry, float rz, float scale) {
 
 	glm::mat4 transMatrix = glm::translate(translation);
@@ -52,7 +46,7 @@ float MathHelper::dist(Vec3 v1, Vec3 v2) {
 
 Vec2 MathHelper::windowToGLFWCoord(Vec2 coords) {
 
-	return { (float) map(coords.x, 0, DisplayManager::width, -1, 1), (float) map(coords.y, 0, DisplayManager::height, 1, -1) };
+	return { (float) map(coords.x, 0, DisplayManager::window->getWidth(), -1, 1), (float) map(coords.y, 0, DisplayManager::window->getHeight(), 1, -1) };
 
 }
 
@@ -63,7 +57,7 @@ Vec2 MathHelper::glfwToWindowCoord(Vec2 coords, Vec2 scale) {
 
 	Vec4 position = proj * trans * Vec4(0, 0, -1.0, 1.0);
 
-	return { (float) map(position.x, -1.0f, 1.0f, 0, DisplayManager::width), (float) map(position.y, 1.0f, -1.0f, 0, DisplayManager::height) };
+	return { (float) map(position.x, -1.0f, 1.0f, 0, DisplayManager::window->getWidth()), (float) map(position.y, 1.0f, -1.0f, 0, DisplayManager::window->getHeight()) };
 
 }
 

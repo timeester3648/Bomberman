@@ -1,9 +1,5 @@
 #include "../../header/handler/FontHandler.h"
 
-#include <iostream>
-
-#define print(x) std::cout << x << std::endl
-
 std::vector<FontHandler::FontData> FontHandler::fonts = std::vector<FontHandler::FontData>();
 
 const Font* FontHandler::getFont(std::string name, float size, bool preload) {

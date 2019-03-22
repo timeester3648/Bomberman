@@ -1,9 +1,5 @@
 #include "../../header/handler/NetworkHandler.h"
 
-#include <WinSock2.h>
-#include <Windows.h>
-#include <iostream>
-
 struct IPv4 {
 
 	int b1, b2, b3, b4;

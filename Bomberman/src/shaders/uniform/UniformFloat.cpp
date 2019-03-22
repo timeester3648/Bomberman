@@ -1,7 +1,5 @@
 #include "../../../header/shaders/uniform/UniformFloat.h"
 
-#include <GLFW\glfw3.h>
-
 UniformFloat::UniformFloat(String name) : Uniform(name) {
 
 }
