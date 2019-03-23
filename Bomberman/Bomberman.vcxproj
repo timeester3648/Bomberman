@@ -70,19 +70,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -93,16 +93,21 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories />
     </ClCompile>
     <Link>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -112,16 +117,21 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories />
     </ClCompile>
     <Link>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -133,18 +143,23 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories />
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -156,183 +171,25 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories />
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\display\DisplayManager.cpp" />
-    <ClCompile Include="src\display\render\GuiRenderer.cpp" />
-    <ClCompile Include="src\display\render\LevelRenderer.cpp" />
-    <ClCompile Include="src\display\render\TextRenderer.cpp" />
-    <ClCompile Include="src\display\render\TileRenderer.cpp" />
-    <ClCompile Include="src\entity\EnemyPlayer.cpp" />
-    <ClCompile Include="src\entity\Entity.cpp" />
-    <ClCompile Include="src\entity\Player.cpp" />
-    <ClCompile Include="src\game\GameManager.cpp" />
-    <ClCompile Include="src\game\ScoreManager.cpp" />
-    <ClCompile Include="src\gui\Gui.cpp" />
-    <ClCompile Include="src\gui\menus\ClientIPAskingMenu.cpp" />
-    <ClCompile Include="src\gui\menus\HighScoreMenu.cpp" />
-    <ClCompile Include="src\gui\menus\HostWaitingMenu.cpp" />
-    <ClCompile Include="src\gui\menus\LocalWonMenu.cpp" />
-    <ClCompile Include="src\gui\menus\OnlineLostMenu.cpp" />
-    <ClCompile Include="src\gui\menus\OnlineWonMenu.cpp" />
-    <ClCompile Include="src\gui\menus\PlayingMenu.cpp" />
-    <ClCompile Include="src\handler\AudioHandler.cpp" />
-    <ClCompile Include="src\handler\FontHandler.cpp" />
-    <ClCompile Include="src\handler\KeyboardHandler.cpp" />
-    <ClCompile Include="src\handler\NetworkHandler.cpp" />
-    <ClCompile Include="src\mod\ModAPI.cpp" />
-    <ClCompile Include="src\networking\Client.cpp" />
-    <ClCompile Include="src\networking\packet\BombPacket.cpp" />
-    <ClCompile Include="src\networking\packet\LevelPacket.cpp" />
-    <ClCompile Include="src\networking\packet\Packet.cpp" />
-    <ClCompile Include="src\networking\packet\PlayerPacket.cpp" />
-    <ClCompile Include="src\networking\Server.cpp" />
-    <ClCompile Include="src\pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\shaders\TextShader.cpp" />
-    <ClCompile Include="src\text\Font.cpp" />
-    <ClCompile Include="src\text\Label.cpp" />
-    <ClCompile Include="src\text\TextButton.cpp" />
-    <ClCompile Include="src\gui\menus\MainMenu.cpp" />
-    <ClCompile Include="src\gui\menus\Menu.cpp" />
-    <ClCompile Include="src\handler\CollisionHandler.cpp" />
-    <ClCompile Include="src\handler\EntityProperties.cpp" />
-    <ClCompile Include="src\handler\LevelHandler.cpp" />
-    <ClCompile Include="src\handler\ModelHandler.cpp" />
-    <ClCompile Include="src\handler\MouseHandler.cpp" />
-    <ClCompile Include="src\handler\RenderHandler.cpp" />
-    <ClCompile Include="src\level\Bomb.cpp" />
-    <ClCompile Include="src\level\Explosion.cpp" />
-    <ClCompile Include="src\level\Level.cpp" />
-    <ClCompile Include="src\level\LevelLoader.cpp" />
-    <ClCompile Include="src\loading\Loader.cpp" />
-    <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\loading\texture\Texture.cpp" />
-    <ClCompile Include="src\loading\texture\TextureLoader.cpp" />
-    <ClCompile Include="src\objects\ModelTexture.cpp" />
-    <ClCompile Include="src\objects\RawModel.cpp" />
-    <ClCompile Include="src\objects\TexturedModel.cpp" />
-    <ClCompile Include="src\objects\Tile.cpp" />
-    <ClCompile Include="src\game\GameSaver.cpp" />
-    <ClCompile Include="src\shaders\GuiShader.cpp" />
-    <ClCompile Include="src\shaders\ShaderProgram.cpp" />
-    <ClCompile Include="src\shaders\StaticShader.cpp" />
-    <ClCompile Include="src\shaders\uniform\Uniform.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformBool.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformFloat.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformInt.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformMatrix.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformSampler.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformVec2.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformVec3.cpp" />
-    <ClCompile Include="src\shaders\uniform\UniformVec4.cpp" />
-    <ClCompile Include="src\util\MathHelper.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="header\display\DisplayManager.h" />
-    <ClInclude Include="header\display\render\GuiRenderer.h" />
-    <ClInclude Include="header\display\render\LevelRenderer.h" />
-    <ClInclude Include="header\display\render\TextRenderer.h" />
-    <ClInclude Include="header\display\render\TileRenderer.h" />
-    <ClInclude Include="header\entity\EnemyPlayer.h" />
-    <ClInclude Include="header\entity\Entity.h" />
-    <ClInclude Include="header\entity\Player.h" />
-    <ClInclude Include="header\enums\ControlType.h" />
-    <ClInclude Include="header\enums\GameState.h" />
-    <ClInclude Include="header\enums\PacketType.h" />
-    <ClInclude Include="header\enums\PlayerState.h" />
-    <ClInclude Include="header\enums\ScoreAction.h" />
-    <ClInclude Include="header\freetype-gl\common.h" />
-    <ClInclude Include="header\freetype-gl\freetype-gl.h" />
-    <ClInclude Include="header\freetype-gl\opengl.h" />
-    <ClInclude Include="header\freetype-gl\platform.h" />
-    <ClInclude Include="header\freetype-gl\texture-atlas.h" />
-    <ClInclude Include="header\freetype-gl\texture-font.h" />
-    <ClInclude Include="header\freetype-gl\vec234.h" />
-    <ClInclude Include="header\freetype-gl\vector.h" />
-    <ClInclude Include="header\game\BuildType.h" />
-    <ClInclude Include="header\game\GameManager.h" />
-    <ClInclude Include="header\game\ScoreManager.h" />
-    <ClInclude Include="header\gui\Gui.h" />
-    <ClInclude Include="header\gui\menus\ClientIPAskingMenu.h" />
-    <ClInclude Include="header\gui\menus\HighScoreMenu.h" />
-    <ClInclude Include="header\gui\menus\HostWaitingMenu.h" />
-    <ClInclude Include="header\gui\menus\LocalWonMenu.h" />
-    <ClInclude Include="header\gui\menus\OnlineLostMenu.h" />
-    <ClInclude Include="header\gui\menus\OnlineWonMenu.h" />
-    <ClInclude Include="header\gui\menus\PlayingMenu.h" />
-    <ClInclude Include="header\handler\AudioHandler.h" />
-    <ClInclude Include="header\handler\FontHandler.h" />
-    <ClInclude Include="header\handler\KeyboardHandler.h" />
-    <ClInclude Include="header\handler\NetworkHandler.h" />
-    <ClInclude Include="header\Main.h" />
-    <ClInclude Include="header\mod\ModAPI.h" />
-    <ClInclude Include="header\networking\Client.h" />
-    <ClInclude Include="header\networking\packet\BombPacket.h" />
-    <ClInclude Include="header\networking\packet\LevelPacket.h" />
-    <ClInclude Include="header\networking\packet\Packet.h" />
-    <ClInclude Include="header\networking\packet\PlayerPacket.h" />
-    <ClInclude Include="header\networking\Server.h" />
-    <ClInclude Include="header\pch.h" />
-    <ClInclude Include="header\shaders\TextShader.h" />
-    <ClInclude Include="header\text\Font.h" />
-    <ClInclude Include="header\text\Label.h" />
-    <ClInclude Include="header\text\TextButton.h" />
-    <ClInclude Include="header\gui\menus\MainMenu.h" />
-    <ClInclude Include="header\gui\menus\Menu.h" />
-    <ClInclude Include="header\handler\CollisionHandler.h" />
-    <ClInclude Include="header\game\EntityProperties.h" />
-    <ClInclude Include="header\handler\LevelHandler.h" />
-    <ClInclude Include="header\handler\ModelHandler.h" />
-    <ClInclude Include="header\handler\MouseHandler.h" />
-    <ClInclude Include="header\handler\RenderHandler.h" />
-    <ClInclude Include="header\game\TileProperties.h" />
-    <ClInclude Include="header\interfaces\Updateable.h" />
-    <ClInclude Include="header\level\Bomb.h" />
-    <ClInclude Include="header\level\Explosion.h" />
-    <ClInclude Include="header\level\Level.h" />
-    <ClInclude Include="header\level\LevelLoader.h" />
-    <ClInclude Include="header\loading\Loader.h" />
-    <ClInclude Include="header\loading\texture\Texture.h" />
-    <ClInclude Include="header\loading\texture\TextureLoader.h" />
-    <ClInclude Include="header\objects\ModelTexture.h" />
-    <ClInclude Include="header\objects\RawModel.h" />
-    <ClInclude Include="header\objects\TexturedModel.h" />
-    <ClInclude Include="header\objects\Tile.h" />
-    <ClInclude Include="header\game\GameSaver.h" />
-    <ClInclude Include="header\shaders\GuiShader.h" />
-    <ClInclude Include="header\shaders\ShaderProgram.h" />
-    <ClInclude Include="header\shaders\StaticShader.h" />
-    <ClInclude Include="header\shaders\uniform\include\Uniforms.h" />
-    <ClInclude Include="header\shaders\uniform\Uniform.h" />
-    <ClInclude Include="header\shaders\uniform\UniformBool.h" />
-    <ClInclude Include="header\shaders\uniform\UniformFloat.h" />
-    <ClInclude Include="header\shaders\uniform\UniformInt.h" />
-    <ClInclude Include="header\shaders\uniform\UniformMatrix.h" />
-    <ClInclude Include="header\shaders\uniform\UniformSampler.h" />
-    <ClInclude Include="header\shaders\uniform\UniformVec2.h" />
-    <ClInclude Include="header\shaders\uniform\UniformVec3.h" />
-    <ClInclude Include="header\shaders\uniform\UniformVec4.h" />
-    <ClInclude Include="header\enums\Action.h" />
-    <ClInclude Include="header\enums\Rotation.h" />
-    <ClInclude Include="header\util\MathHelper.h" />
-    <ClInclude Include="header\util\TexturedModelCompare.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -342,12 +199,7 @@
     <Image Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\shaders\files\fragmentShader.frag" />
-    <None Include="src\shaders\files\guiFragmentShader.frag" />
-    <None Include="src\shaders\files\guiVertexShader.vert" />
-    <None Include="src\shaders\files\textFragmentShader.frag" />
-    <None Include="src\shaders\files\textVertexShader.vert" />
-    <None Include="src\shaders\files\vertexShader.vert" />
+    <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -72,22 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -98,18 +98,19 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_SDK;NDEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -118,16 +119,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_SDK;WIN32;_DEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -136,16 +138,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_SDK;_DEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -156,26 +159,33 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_SDK;WIN32;NDEBUG;BOMBERMANSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="header\include\Core.h" />
+    <ClInclude Include="header\include\Event.h" />
+    <ClInclude Include="header\include\Level.h" />
+    <ClInclude Include="header\include\Player.h" />
+    <ClInclude Include="header\include\SDK.h" />
     <ClInclude Include="header\pch.h" />
     <ClInclude Include="header\targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\Event.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -186,6 +196,7 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="src\SDK.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

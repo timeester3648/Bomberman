@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{20D63A30-D68E-40F3-B05C-9A71F708A720}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameLogic</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)header\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)header\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)header\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)header\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BUILD_GAME_LOGIC;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;NDEBUG;GAMELOGIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BUILD_GAME_LOGIC;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;WIN32;_DEBUG;GAMELOGIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BUILD_GAME_LOGIC;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_DEBUG;GAMELOGIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BUILD_GAME_LOGIC;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;WIN32;NDEBUG;GAMELOGIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="header\display\DisplayManager.h" />
+    <ClInclude Include="header\display\render\GuiRenderer.h" />
+    <ClInclude Include="header\display\render\LevelRenderer.h" />
+    <ClInclude Include="header\display\render\TextRenderer.h" />
+    <ClInclude Include="header\display\render\TileRenderer.h" />
+    <ClInclude Include="header\entity\EnemyPlayer.h" />
+    <ClInclude Include="header\entity\Entity.h" />
+    <ClInclude Include="header\entity\Player.h" />
+    <ClInclude Include="header\enums\Action.h" />
+    <ClInclude Include="header\enums\ControlType.h" />
+    <ClInclude Include="header\enums\GameState.h" />
+    <ClInclude Include="header\enums\PacketType.h" />
+    <ClInclude Include="header\enums\PlayerState.h" />
+    <ClInclude Include="header\enums\Rotation.h" />
+    <ClInclude Include="header\enums\ScoreAction.h" />
+    <ClInclude Include="header\game\BuildType.h" />
+    <ClInclude Include="header\game\EntityProperties.h" />
+    <ClInclude Include="header\game\GameManager.h" />
+    <ClInclude Include="header\game\GameSaver.h" />
+    <ClInclude Include="header\game\ScoreManager.h" />
+    <ClInclude Include="header\game\TileProperties.h" />
+    <ClInclude Include="header\gui\Gui.h" />
+    <ClInclude Include="header\gui\menus\ClientIPAskingMenu.h" />
+    <ClInclude Include="header\gui\menus\HighScoreMenu.h" />
+    <ClInclude Include="header\gui\menus\HostWaitingMenu.h" />
+    <ClInclude Include="header\gui\menus\LocalWonMenu.h" />
+    <ClInclude Include="header\gui\menus\MainMenu.h" />
+    <ClInclude Include="header\gui\menus\Menu.h" />
+    <ClInclude Include="header\gui\menus\OnlineLostMenu.h" />
+    <ClInclude Include="header\gui\menus\OnlineWonMenu.h" />
+    <ClInclude Include="header\gui\menus\PlayingMenu.h" />
+    <ClInclude Include="header\handler\AudioHandler.h" />
+    <ClInclude Include="header\handler\CollisionHandler.h" />
+    <ClInclude Include="header\handler\FontHandler.h" />
+    <ClInclude Include="header\handler\KeyboardHandler.h" />
+    <ClInclude Include="header\handler\LevelHandler.h" />
+    <ClInclude Include="header\handler\ModelHandler.h" />
+    <ClInclude Include="header\handler\MouseHandler.h" />
+    <ClInclude Include="header\handler\NetworkHandler.h" />
+    <ClInclude Include="header\handler\RenderHandler.h" />
+    <ClInclude Include="header\interfaces\Updateable.h" />
+    <ClInclude Include="header\level\Bomb.h" />
+    <ClInclude Include="header\level\Explosion.h" />
+    <ClInclude Include="header\level\Level.h" />
+    <ClInclude Include="header\level\LevelLoader.h" />
+    <ClInclude Include="header\loading\Loader.h" />
+    <ClInclude Include="header\loading\texture\Texture.h" />
+    <ClInclude Include="header\loading\texture\TextureLoader.h" />
+    <ClInclude Include="header\Main.h" />
+    <ClInclude Include="header\mod\EventType.h" />
+    <ClInclude Include="header\mod\ModAPI.h" />
+    <ClInclude Include="header\networking\Client.h" />
+    <ClInclude Include="header\networking\packet\BombPacket.h" />
+    <ClInclude Include="header\networking\packet\LevelPacket.h" />
+    <ClInclude Include="header\networking\packet\Packet.h" />
+    <ClInclude Include="header\networking\packet\PlayerPacket.h" />
+    <ClInclude Include="header\networking\Server.h" />
+    <ClInclude Include="header\objects\ModelTexture.h" />
+    <ClInclude Include="header\objects\RawModel.h" />
+    <ClInclude Include="header\objects\TexturedModel.h" />
+    <ClInclude Include="header\objects\Tile.h" />
+    <ClInclude Include="header\pch.h" />
+    <ClInclude Include="header\shaders\GuiShader.h" />
+    <ClInclude Include="header\shaders\ShaderProgram.h" />
+    <ClInclude Include="header\shaders\StaticShader.h" />
+    <ClInclude Include="header\shaders\TextShader.h" />
+    <ClInclude Include="header\shaders\uniform\include\Uniforms.h" />
+    <ClInclude Include="header\shaders\uniform\Uniform.h" />
+    <ClInclude Include="header\shaders\uniform\UniformBool.h" />
+    <ClInclude Include="header\shaders\uniform\UniformFloat.h" />
+    <ClInclude Include="header\shaders\uniform\UniformInt.h" />
+    <ClInclude Include="header\shaders\uniform\UniformMatrix.h" />
+    <ClInclude Include="header\shaders\uniform\UniformSampler.h" />
+    <ClInclude Include="header\shaders\uniform\UniformVec2.h" />
+    <ClInclude Include="header\shaders\uniform\UniformVec3.h" />
+    <ClInclude Include="header\shaders\uniform\UniformVec4.h" />
+    <ClInclude Include="header\text\Font.h" />
+    <ClInclude Include="header\text\Label.h" />
+    <ClInclude Include="header\text\TextButton.h" />
+    <ClInclude Include="header\util\MathHelper.h" />
+    <ClInclude Include="header\util\TexturedModelCompare.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="src\display\DisplayManager.cpp" />
+    <ClCompile Include="src\display\render\GuiRenderer.cpp" />
+    <ClCompile Include="src\display\render\LevelRenderer.cpp" />
+    <ClCompile Include="src\display\render\TextRenderer.cpp" />
+    <ClCompile Include="src\display\render\TileRenderer.cpp" />
+    <ClCompile Include="src\entity\EnemyPlayer.cpp" />
+    <ClCompile Include="src\entity\Entity.cpp" />
+    <ClCompile Include="src\entity\Player.cpp" />
+    <ClCompile Include="src\game\GameManager.cpp" />
+    <ClCompile Include="src\game\GameSaver.cpp" />
+    <ClCompile Include="src\game\ScoreManager.cpp" />
+    <ClCompile Include="src\gui\Gui.cpp" />
+    <ClCompile Include="src\gui\menus\ClientIPAskingMenu.cpp" />
+    <ClCompile Include="src\gui\menus\HighScoreMenu.cpp" />
+    <ClCompile Include="src\gui\menus\HostWaitingMenu.cpp" />
+    <ClCompile Include="src\gui\menus\LocalWonMenu.cpp" />
+    <ClCompile Include="src\gui\menus\MainMenu.cpp" />
+    <ClCompile Include="src\gui\menus\Menu.cpp" />
+    <ClCompile Include="src\gui\menus\OnlineLostMenu.cpp" />
+    <ClCompile Include="src\gui\menus\OnlineWonMenu.cpp" />
+    <ClCompile Include="src\gui\menus\PlayingMenu.cpp" />
+    <ClCompile Include="src\handler\AudioHandler.cpp" />
+    <ClCompile Include="src\handler\CollisionHandler.cpp" />
+    <ClCompile Include="src\handler\EntityProperties.cpp" />
+    <ClCompile Include="src\handler\FontHandler.cpp" />
+    <ClCompile Include="src\handler\KeyboardHandler.cpp" />
+    <ClCompile Include="src\handler\LevelHandler.cpp" />
+    <ClCompile Include="src\handler\ModelHandler.cpp" />
+    <ClCompile Include="src\handler\MouseHandler.cpp" />
+    <ClCompile Include="src\handler\NetworkHandler.cpp" />
+    <ClCompile Include="src\handler\RenderHandler.cpp" />
+    <ClCompile Include="src\level\Bomb.cpp" />
+    <ClCompile Include="src\level\Explosion.cpp" />
+    <ClCompile Include="src\level\Level.cpp" />
+    <ClCompile Include="src\level\LevelLoader.cpp" />
+    <ClCompile Include="src\loading\Loader.cpp" />
+    <ClCompile Include="src\loading\texture\Texture.cpp" />
+    <ClCompile Include="src\loading\texture\TextureLoader.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\mod\ModAPI.cpp" />
+    <ClCompile Include="src\networking\Client.cpp" />
+    <ClCompile Include="src\networking\packet\BombPacket.cpp" />
+    <ClCompile Include="src\networking\packet\LevelPacket.cpp" />
+    <ClCompile Include="src\networking\packet\Packet.cpp" />
+    <ClCompile Include="src\networking\packet\PlayerPacket.cpp" />
+    <ClCompile Include="src\networking\Server.cpp" />
+    <ClCompile Include="src\objects\ModelTexture.cpp" />
+    <ClCompile Include="src\objects\RawModel.cpp" />
+    <ClCompile Include="src\objects\TexturedModel.cpp" />
+    <ClCompile Include="src\objects\Tile.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\shaders\GuiShader.cpp" />
+    <ClCompile Include="src\shaders\ShaderProgram.cpp" />
+    <ClCompile Include="src\shaders\StaticShader.cpp" />
+    <ClCompile Include="src\shaders\TextShader.cpp" />
+    <ClCompile Include="src\shaders\uniform\Uniform.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformBool.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformFloat.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformInt.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformMatrix.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformSampler.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformVec2.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformVec3.cpp" />
+    <ClCompile Include="src\shaders\uniform\UniformVec4.cpp" />
+    <ClCompile Include="src\text\Font.cpp" />
+    <ClCompile Include="src\text\Label.cpp" />
+    <ClCompile Include="src\text\TextButton.cpp" />
+    <ClCompile Include="src\util\MathHelper.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
