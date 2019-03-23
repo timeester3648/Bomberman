@@ -1,47 +1,3 @@
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\freetype.pdb
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftstroke.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftpfr.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftpatent.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftotval.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftmm.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftlcdfil.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftinit.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftgxval.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftglyph.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftgasp.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftfstype.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftdebug.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftbitmap.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftbbox.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftbase.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\autofit.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\vector.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\texture-font.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\texture-atlas.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\platform.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\truetype.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\smooth.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\sfnt.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\raster.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\psmodule.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\pshinter.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\psaux.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\pfr.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\pcf.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftlzw.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftgzip.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\type1cid.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\cff.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftcache.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\bdf.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftxf86.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftwinfnt.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\fttype1.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftsystem.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\ftsynth.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\winfnt.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\type42.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\dependencies\freetype\x64\release\type1.obj
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\freetype.pdb
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\ftstroke.obj
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\ftpfr.obj
@@ -86,7 +42,6 @@ d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\re
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\winfnt.obj
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\type42.obj
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\type1.obj
-d:\coding\c++\c++ workspace visual studio\opengl minecraft\x64\release\freetype.lib
 d:\coding\c++\c++ workspace visual studio\bomberman\x64\release\freetype.lib
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\freetype.tlog\cl.command.1.tlog
 d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\x64\release\freetype.tlog\cl.read.1.tlog

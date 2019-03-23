@@ -70,20 +70,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\freetype\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;D:\Program Files (x86)\OpenAL 1.1 SDK\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)x64\Release\;$(SolutionDir)lib\;D:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win64\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)lib\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
