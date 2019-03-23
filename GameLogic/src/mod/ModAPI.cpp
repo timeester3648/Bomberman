@@ -212,6 +212,10 @@ void ModAPI::registerMods() {
 
 void ModAPI::unregisterMods() {
 
+	gameEvents.clear();
+	worldEvents.clear();
+	playerEvents.clear();
+
 	for (auto& mod : mods) {
 
 		auto unload = mod->get<void ()>("unregisterMod");
