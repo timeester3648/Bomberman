@@ -150,6 +150,22 @@ void ModAPI::onPlayerEvent(EventType event, Player* player) {
 
 		}
 
+		case EventType::BombPlace: {
+
+			for (auto& it : playerEvents) {
+
+				if (it.first == EventType::BombPlace) {
+
+					it.second(player);
+
+				}
+
+			}
+
+			break;
+
+		}
+
 		default: {
 
 			break;

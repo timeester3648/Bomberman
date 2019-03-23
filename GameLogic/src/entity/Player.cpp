@@ -89,6 +89,8 @@ void Player::interact(Action action) {
 
 			}
 
+			ModAPI::onPlayerEvent(EventType::BombPlace, this);
+
 			break;
 
 		default:
@@ -137,6 +139,12 @@ void Player::update() {
 			}
 
 			this->animate_death();
+
+		}
+
+		if (!this->dead) {
+
+			ModAPI::onPlayerEvent(EventType::PlayerDie, this);
 
 		}
 
@@ -191,6 +199,8 @@ void Player::animate_death() {
 void Player::take_hit() {
 
 	this->hurting = true;
+
+	ModAPI::onPlayerEvent(EventType::PlayerHurt, this);
 
 }
 

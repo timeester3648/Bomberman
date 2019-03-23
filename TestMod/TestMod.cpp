@@ -4,7 +4,7 @@ MOD_API void registerMod() {
 
 	BombermanSDK::print("Load TestMod");
 
-	BombermanSDK::registerPlayerEvent(BombermanSDK::EventType::PlayerMove, [&](Player* player) {
+	BombermanSDK::registerPlayerEvent(BombermanSDK::EventType::BombPlace, [&](Player* player) {
 	
 		BombermanSDK::print(std::to_string(player->hp));
 	
