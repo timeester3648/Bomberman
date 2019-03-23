@@ -2,6 +2,7 @@
 
 enum class EventType {
 
+	TileRemove,		// World event
 	TileDestroy,	// World event
 
 	BombPlace,		// Player event

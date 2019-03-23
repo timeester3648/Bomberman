@@ -1,8 +1,9 @@
-#include "../../header/handler/LevelHandler.h"
-#include "../../header/handler/ModelHandler.h"
-#include "../../header/handler/CollisionHandler.h"
-#include "../../header/level/Bomb.h"
-#include "../../header/level/Explosion.h"
+#include "handler/LevelHandler.h"
+#include "handler/ModelHandler.h"
+#include "handler/CollisionHandler.h"
+#include "level/Bomb.h"
+#include "level/Explosion.h"
+#include "mod/ModAPI.h"
 
 void LevelHandler::updateBombs(Level* level) {
 
@@ -72,11 +73,13 @@ void LevelHandler::updateTiles(Level* level) {
 
 			if (tile->remove) {
 
-				delete tile;
-
 				level->tiles[it.first].erase(level->tiles[it.first].begin() + i);
 
 				updated = true;
+
+				ModAPI::onWorldEvent(EventType::TileRemove, level, (int) tile->index.x, (int) tile->index.y);
+
+				delete tile;
 
 			}
 

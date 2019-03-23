@@ -24,6 +24,24 @@
 
 			}
 
+        },
+        
+        {
+
+			"x": 3,
+			"y": 3,
+			"model": 0,
+			"hollow": true,
+            "collidable": true,
+            "explodeable": true,
+
+			"tile-index": {
+
+				"x": 1,
+				"y": 12
+
+			}
+
 		},
 
 		{

@@ -4,7 +4,7 @@
 std::vector<Dll*> ModAPI::mods;
 std::multimap<EventType, std::function<void ()>> ModAPI::gameEvents;
 std::multimap<EventType, std::function<void (Player*)>> ModAPI::playerEvents;
-std::multimap<EventType, std::function<void (Level*)>> ModAPI::worldEvents;
+std::multimap<EventType, std::function<void (Level*, int, int)>> ModAPI::worldEvents;
 
 void ModAPI::onGameEvent(EventType event) {
 
@@ -52,9 +52,25 @@ void ModAPI::onGameEvent(EventType event) {
 
 }
 
-void ModAPI::onWorldEvent(EventType event, Level* level) {
+void ModAPI::onWorldEvent(EventType event, Level* level, int x, int y) {
 
 	switch (event) {
+
+		case EventType::TileRemove: {
+
+			for (auto& it : worldEvents) {
+
+				if (it.first == EventType::TileRemove) {
+
+					it.second(level, x, y);
+
+				}
+
+			}
+
+			break;
+
+		}
 
 		case EventType::TileDestroy: {
 
@@ -62,7 +78,7 @@ void ModAPI::onWorldEvent(EventType event, Level* level) {
 
 				if (it.first == EventType::TileDestroy) {
 
-					it.second(level);
+					it.second(level, x, y);
 
 				}
 
@@ -78,7 +94,7 @@ void ModAPI::onWorldEvent(EventType event, Level* level) {
 
 				if (it.first == EventType::BombExplode) {
 
-					it.second(level);
+					it.second(level, x, y);
 
 				}
 
@@ -258,7 +274,7 @@ void ModAPI::registerPlayerEvent(EventType type, std::function<void (Player*)> c
 
 }
 
-void ModAPI::registerWorldEvent(EventType type, std::function<void (Level*)> callback) {
+void ModAPI::registerWorldEvent(EventType type, std::function<void (Level*, int, int)> callback) {
 
 	worldEvents.insert(decltype(worldEvents)::value_type(type, callback));
 

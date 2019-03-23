@@ -1,13 +1,14 @@
-#include "../../header/game/GameManager.h"
-#include "../../header/level/LevelLoader.h"
-#include "../../header/handler/ModelHandler.h"
-#include "../../header/game/TileProperties.h"
-#include "../../header/display/DisplayManager.h"
-#include "../../header/handler/NetworkHandler.h"
-#include "../../header/handler/AudioHandler.h"
-#include "../../header/game/ScoreManager.h"
-#include "../../header/game/GameSaver.h"
-#include "../../header/Main.h"
+#include "game/GameManager.h"
+#include "level/LevelLoader.h"
+#include "handler/ModelHandler.h"
+#include "game/TileProperties.h"
+#include "display/DisplayManager.h"
+#include "handler/NetworkHandler.h"
+#include "handler/AudioHandler.h"
+#include "game/ScoreManager.h"
+#include "game/GameSaver.h"
+#include "mod/ModAPI.h"
+#include "Main.h"
 
 GameManager& GameManager::getManager() {
 
@@ -75,6 +76,8 @@ void GameManager::startGame() {
 	getManager().players.push_back(player0);
 	getManager().players.push_back(player1);
 
+	ModAPI::onGameEvent(EventType::GameStart);
+
 }
 
 void GameManager::joinGame() {
@@ -122,6 +125,8 @@ void GameManager::joinGameContinue() {
 
 	getManager().players.push_back(Main::player);
 
+	ModAPI::onGameEvent(EventType::GameStart);
+
 }
 
 void GameManager::hostGame() {
@@ -144,6 +149,8 @@ void GameManager::hostGame() {
 	gameplay->addTile(Main::enemy_player);
 
 	getManager().players.push_back(Main::player);
+
+	ModAPI::onGameEvent(EventType::GameStart);
 
 }
 
@@ -172,6 +179,8 @@ void GameManager::update() {
 
 				GameSaver::saveGame();
 
+				ModAPI::onGameEvent(EventType::GameFinish);
+
 			}
 
 		}
@@ -190,6 +199,8 @@ void GameManager::update() {
 				AudioHandler::die->stop();
 				AudioHandler::die->play();
 
+				ModAPI::onGameEvent(EventType::GameFinish);
+
 			}
 
 		}
@@ -205,6 +216,8 @@ void GameManager::update() {
 
 				AudioHandler::win->stop();
 				AudioHandler::win->play();
+
+				ModAPI::onGameEvent(EventType::GameFinish);
 
 			}
 

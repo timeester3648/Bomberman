@@ -17,7 +17,7 @@ namespace BombermanSDK {
 
 	}
 
-	SDK_API void registerWorldEvent(EventType type, ::std::function<void (Level*)> callback) {
+	SDK_API void registerWorldEvent(EventType type, ::std::function<void (Level*, int, int)> callback) {
 
 		ModAPI::registerWorldEvent(static_cast<::EventType>(type), callback);
 

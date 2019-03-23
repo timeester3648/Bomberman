@@ -212,6 +212,6 @@ Vec3 LevelLoader::getPosition(Vec2 index, Vec2 desiredSize) {
 	float x = index.x * scl - (width * .5f);
 	float y = index.y * scl - (height * .5f);
 
-	return { x, EOUL::Math::map(y, -1, 1, 1, -1), TileProperties::tile_z };
+	return { (double) x, map(y, -1.0, 1.0, 1.0, -1.0), (double) TileProperties::tile_z };
 
 }

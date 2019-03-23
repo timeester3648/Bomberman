@@ -1,14 +1,15 @@
-#include "../../header/level/Bomb.h"
-#include "../../header/handler/ModelHandler.h"
-#include "../../header/handler/LevelHandler.h"
-#include "../../header/level/Level.h"
-#include "../../header/level/Explosion.h"
-#include "../../header/game/EntityProperties.h"
-#include "../../header/game/ScoreManager.h"
-#include "../../header/entity/Player.h"
-#include "../../header/util/MathHelper.h"
-#include "../../header/handler/AudioHandler.h"
-#include "../../header/Main.h"
+#include "level/Bomb.h"
+#include "handler/ModelHandler.h"
+#include "handler/LevelHandler.h"
+#include "level/Level.h"
+#include "level/Explosion.h"
+#include "game/EntityProperties.h"
+#include "game/ScoreManager.h"
+#include "entity/Player.h"
+#include "util/MathHelper.h"
+#include "handler/AudioHandler.h"
+#include "mod/ModAPI.h"
+#include "Main.h"
 
 Bomb::Bomb(Vec3 position, int timeLeft, Player* player) : Tile(position, *ModelHandler::getModelById(3)), timeLeft(timeLeft), player(player) {
 
@@ -142,6 +143,8 @@ bool Bomb::explodeTile(Vec2 pos) {
 			ScoreManager::giveScore(ScoreAction::DestroyWall, (this->player->type == ControlType::Arrows ? 0 : 1));
 
 			this->level->addTile((new Explosion(this->level->gridToWorldPos(pos), TileProperties::explosion_time, this))->setLevel(this->level)->setIndex(pos));
+
+			ModAPI::onWorldEvent(EventType::TileDestroy, level, (int) tile->index.x, (int) tile->index.y);
 
 			return true;
 
