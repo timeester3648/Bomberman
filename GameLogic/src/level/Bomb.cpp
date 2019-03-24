@@ -81,17 +81,7 @@ void Bomb::explode() {
 
 bool Bomb::hasDamaged(Entity* entity) {
 
-	for (auto& e : damaged) {
-
-		if (e == entity) {
-
-			return true;
-
-		}
-
-	}
-
-	return false;
+	return std::find(this->damaged.begin(), this->damaged.end(), entity) != this->damaged.end();
 
 }
 
@@ -136,7 +126,7 @@ bool Bomb::explodeTile(Vec2 pos) {
 
 	if (tile != nullptr) {
 
-		if (tile->explodeable) {
+		if (tile->explodeable && dynamic_cast<Bomb*>(tile) == nullptr) {
 
 			tile->remove = true;
 
@@ -147,6 +137,16 @@ bool Bomb::explodeTile(Vec2 pos) {
 			ModAPI::onWorldEvent(EventType::TileDestroy, level, (int) tile->index.x, (int) tile->index.y);
 
 			return true;
+
+		} else if (dynamic_cast<Bomb*>(tile) != nullptr) {
+
+			Bomb* b = static_cast<Bomb*>(tile);
+
+			if (!b->exploded) {
+
+				b->explode();
+
+			}
 
 		} else {
 

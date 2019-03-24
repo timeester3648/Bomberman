@@ -66,6 +66,12 @@ void LevelHandler::updateTiles(Level* level) {
 	bool updated = false;
 
 	for (auto& it : level->tiles) {
+
+		if (it.first == ModelHandler::getModelById(3) || it.first == ModelHandler::getModelById(1)) {
+			
+			continue;
+
+		}
 		
 		for (int i = (int) level->tiles[it.first].size() - 1; i >= 0; i--) {
 

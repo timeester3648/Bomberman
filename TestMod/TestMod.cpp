@@ -4,13 +4,11 @@ MOD_API void registerMod() {
 
 	BombermanSDK::print("Load TestMod");
 
-	BombermanSDK::registerPlayerEvent(BombermanSDK::EventType::PlayerHurt, [&](Player* player) {
-
-		BombermanSDK::print("Current Health: " + std::to_string(player->hp));
+	BombermanSDK::registerPlayerEvent(BombermanSDK::EventType::PlayerDie, [&](Player* player) {
 	
 	});
 
-	BombermanSDK::registerGameEvent(BombermanSDK::EventType::GameStart, [&]() {
+	/*BombermanSDK::registerGameEvent(BombermanSDK::EventType::GameStart, [&]() {
 	
 		BombermanSDK::print("start");
 
@@ -26,7 +24,7 @@ MOD_API void registerMod() {
 
 		BombermanSDK::print("Destroyed: " + std::to_string(x) + " " + std::to_string(y));
 	
-	});
+	});*/
 
 }
 

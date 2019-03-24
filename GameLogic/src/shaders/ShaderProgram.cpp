@@ -1,10 +1,6 @@
 #include "../../header/shaders/ShaderProgram.h"
 #include "../../header/game/BuildType.h"
 
-#ifdef BUILD_EXE		
-	#pragma comment(linker, "/subsystem:windows /entry:mainCRTStartup")
-#endif
-
 ShaderProgram::ShaderProgram(const char* vertexFile, const char* fragmentFile) : vertexFile(vertexFile), fragmentFile(fragmentFile) {
 
 }
