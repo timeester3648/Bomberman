@@ -471,4 +471,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shaders\files\fragmentShader.frag" />
+    <None Include="src\shaders\files\guiFragmentShader.frag" />
+    <None Include="src\shaders\files\guiVertexShader.vert" />
+    <None Include="src\shaders\files\textFragmentShader.frag" />
+    <None Include="src\shaders\files\textVertexShader.vert" />
+    <None Include="src\shaders\files\vertexShader.vert" />
+  </ItemGroup>
 </Project>

@@ -29,9 +29,7 @@ GAME_LOGIC_API void start() {
 
 	if (enet_initialize() != 0) {
 
-		print("Couldn't initialize enet.");
-
-		exit(EXIT_FAILURE);
+		throw std::runtime_error("Couldn't initialize enet.");
 
 	}
 
@@ -67,6 +65,8 @@ GAME_LOGIC_API void start() {
 			GameManager::update();
 			KeyboardHandler::update();
 
+			DisplayManager::window->poll();
+
 			delta--;
 
 		}
@@ -87,7 +87,7 @@ GAME_LOGIC_API void start() {
 
 			GameManager::render();
 
-			DisplayManager::window->update();
+			DisplayManager::window->swapBuffers();
 
 		}
 

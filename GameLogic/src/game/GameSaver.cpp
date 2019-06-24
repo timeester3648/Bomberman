@@ -7,7 +7,7 @@ void GameSaver::saveGame() {
 
 	SaveFile save = SaveFile(path);
 
-	save.remove();
+	save.open(std::fstream::out | std::fstream::trunc);
 
 	save.saveQueued((char*) &ScoreManager::high_score_player_0, sizeof(ScoreManager::high_score_player_0));
 	save.saveQueued((char*) &ScoreManager::high_score_player_1, sizeof(ScoreManager::high_score_player_1));
@@ -15,12 +15,15 @@ void GameSaver::saveGame() {
 	save.saveQueued((char*) &ScoreManager::latest_score_player_1, sizeof(ScoreManager::latest_score_player_1));
 
 	save.saveAllQueued();
+	save.close();
 
 }
 
 void GameSaver::loadGame() {
 
 	SaveFile save = SaveFile(path);
+
+	save.open(std::fstream::in);
 
 	std::vector<SaveData> saveData = save.readData();
 
@@ -32,5 +35,7 @@ void GameSaver::loadGame() {
 		memcpy(&ScoreManager::latest_score_player_1, saveData[3].data.get(), sizeof(ScoreManager::latest_score_player_1));
 
 	}
+
+	save.close();
 
 }

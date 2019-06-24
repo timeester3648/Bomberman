@@ -32,7 +32,7 @@
 #include <freetype-gl\freetype-gl.h>
 
 #define EOUL_USE_ALL
-#include <EOUL.h>
+#include <EOUL.hpp>
 #include <EOUL-GLFW.h>
 #include <EOUL-OpenAL.h>
 

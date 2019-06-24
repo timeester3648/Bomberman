@@ -1,16 +1,15 @@
 ﻿  platform.c
   texture-atlas.c
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(53): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(133): warning C4090: '=': different 'const' qualifiers
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(165): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(240): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(241): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(266): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(267): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(223): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-atlas.c(315): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(53,1): warning C4267:  'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(133,40): warning C4090:  '=': different 'const' qualifiers
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(165,23): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(240,29): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(241,19): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(266,32): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(267,20): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(223,1): warning C4267:  'initializing': conversion from 'size_t' to 'int', possible loss of data
   texture-font.c
-d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freetype-gl\texture-font.c(93): warning C4267: 'function': conversion from 'size_t' to 'FT_Long', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(315,27): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
   vector.c
   autofit.c
   ftbase.c
@@ -53,4 +52,5 @@ d:\coding\c++\c++ workspace visual studio\bomberman\dependencies\freetype\freety
   type1.c
   type42.c
   winfnt.c
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-font.c(93,49): warning C4267:  'function': conversion from 'size_t' to 'FT_Long', possible loss of data
   FreeType.vcxproj -> D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\x64\Release\FreeType.lib

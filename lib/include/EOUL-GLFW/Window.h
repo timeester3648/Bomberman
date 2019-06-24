@@ -1,7 +1,8 @@
 #pragma once
 
-#include <EOUL\Image.h>
+#include <EOUL\Image.hpp>
 #include <GLFW\glfw3.h>
+#include <functional>
 #include <string>
 #include <vector>
 
@@ -9,36 +10,26 @@ namespace EOUL {
 
 	namespace GL {
 
-		class Window {
-
-			public:
-
-				struct WindowPos {
-
-					int x, y;
-
-				};
+		class Window final {
 
 			private:
 
-				static unsigned char buttons;
+				unsigned char buttons = 0;
 
-				static double mouseX;
-				static double mouseY;
+				double mouseX = 0.0;
+				double mouseY = 0.0;
 
-				static unsigned int width, height, min_width, min_height, max_width, max_height;
-				static float aspect_ratio;
+				unsigned int width, height, min_width = GLFW_DONT_CARE, min_height = GLFW_DONT_CARE, max_width = GLFW_DONT_CARE, max_height = GLFW_DONT_CARE;
+				float aspect_ratio;
 
-				static void (*on_cursor_enter)(int entered);
-				static void (*on_resize)(int width, int height);
-				static void (*on_mouse_move)(double x, double y);
-				static void (*on_drop)(int count, const char** paths);
-				static void (*on_scroll)(double xoffset, double yoffset);
-				static void (*on_error)(int error, const char* description);
-				static void (*on_mouse_input)(int button, int action, int mods);
-				static void (*on_key_input)(int key, int scancode, int action, int mods);
-
-			private:				
+				std::function<void (double, double)> onScrollCallback;
+				std::function<void (int, int, int)> onMouseInputCallback;
+				std::function<void (int, int)> onResizeCallback;
+				std::function<void (int, const char*)> onErrorCallback;
+				std::function<void (double, double)> onMouseMoveCallback;
+				std::function<void (int)> onCursorEnterCallback;
+				std::function<void (int, const char**)> onDropCallback;
+				std::function<void (int, int, int, int)> onKeyInputCallback;
 
 				GLFWwindow* window = nullptr;
 				GLFWimage* images = nullptr;
@@ -57,14 +48,20 @@ namespace EOUL {
 				int old[4];
 
 				std::string title;
-				std::vector<std::string> icons;
+				std::vector<std::filesystem::path> icons;
 
 			public:
 
 				Window(unsigned int width, unsigned int height, std::string title);
 				~Window();
 
+				Window(const Window& other) = delete;
+				Window(Window&&) = delete;
+
 			public:
+
+				/* returns the windows title */
+				const std::string& getTitle() const;
 
 				/* returns the current width of the window */
 				unsigned int getWidth() const;
@@ -78,6 +75,9 @@ namespace EOUL {
 				double getMouseX() const;
 				/* returns mouse y position [0 - height] */
 				double getMouseY() const;
+
+				/* returns mouse position [0 - width] and [0 - height] */
+				std::pair<double, double> getMousePos() const;
 
 				/* returns if the window is resizable */
 				bool isResizable() const;
@@ -97,9 +97,11 @@ namespace EOUL {
 				bool isMaximized() const;
 				/* returns if the window is minimized */
 				bool isMinimized() const;
+				/* returns if glfw initialized, tries to initialize glfw when noet already done. resets window hints. */
+				bool init();
 
 				/* returns the window position */
-				WindowPos getWindowPosition() const;
+				std::pair<int, int> getWindowPosition() const;
 
 				/* returns the current aspect ratio */
 				float getAspectRatio() const;
@@ -134,41 +136,53 @@ namespace EOUL {
 				Window* setMinimized(bool minimize);
 				/* set window decorated. returns itself for convenience */
 				Window* setDecorated(bool decorated);
+				/* set window hint. needs to be called before show(). returns itself for convenience */
+				Window* setWindowHint(int hint, int value);
 
-				/* initializes GLFW and GLEW and shows/creates the window */
+				/* 
+
+					returns the GLFWwindow pointer.
+					changing certain properties/callbacks could resolve into errors.
+
+				*/
+				GLFWwindow* getWindow() const;
+
+				/* initializes GLFW if not already initialized and shows/creates the window */
 				void show();
 				/* closes the window */
 				void close();
-				/* update the window (should be called after every frame rendered) */
-				void update() const;
+				/* swaps buffers, only works with an OpenGL/OpenGL ES context */
+				void swapBuffers() const;
+				/* updates the window (polls the events) */
+				void poll() const;
 				/* centers the window */
 				void center();
 
 				/* adds an icon */
-				void addIcon(std::string path);
+				void addIcon(std::filesystem::path path);
 				/* adds an icon */
 				void addIcon(const IO::Image& image);
 				/* adds an vector of icons */
-				void addIcons(const std::vector<std::string>& paths);
+				void addIcons(const std::vector<std::filesystem::path>& paths);
 				/* adds an vector of icons */
 				void addIcons(const std::vector<IO::Image>& images);
 
 				/* adds a scroll event handler */
-				void onScroll(void (*on_scroll)(double xoffset, double yoffset));
+				void onScroll(std::function<void (double, double)> callback);
 				/* adds a mouse input event handler */
-				void onMouseInput(void (*on_mouse_input)(int button, int action, int mods));
+				void onMouseInput(std::function<void (int, int, int)> callback);
 				/* adds a resize event handler */
-				void onResize(void (*on_resize)(int width, int height));
+				void onResize(std::function<void (int, int)> callback);
 				/* adds an error event handler */
-				void onError(void (*on_error)(int error, const char* description));
+				void onError(std::function<void (int, const char*)> callback);
 				/* adds an mouse move event handler */
-				void onMouseMove(void (*on_mouse_move)(double x, double y));
+				void onMouseMove(std::function<void (double, double)> callback);
 				/* adds a cursor enter event handler */
-				void onCursorEnter(void (*on_cursor_enter)(int entered));
+				void onCursorEnter(std::function<void (int)> callback);
 				/* adds a drop event handler */
-				void onDrop(void (*on_drop)(int count, const char** paths));
+				void onDrop(std::function<void (int, const char**)> callback);
 				/* adds a key input event handler */
-				void onKeyInput(void (*on_key_input)(int key, int scancode, int action, int mods));
+				void onKeyInput(std::function<void (int, int, int, int)> callback);
 
 			private:
 

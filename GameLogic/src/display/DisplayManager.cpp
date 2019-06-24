@@ -23,6 +23,12 @@ void DisplayManager::createDisplay() {
 	window->onKeyInput(KeyboardHandler::key_callback);
 	window->onMouseInput(MouseHandler::mouse_input_callback);
 
+	if (glewInit() != GLEW_OK) {
+
+		throw std::runtime_error("GLEW couldn't be initialized");
+
+	}
+
 	std::cout << glfwGetVersionString() << std::endl;
 
 }

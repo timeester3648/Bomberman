@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bomberman", "Bomberman\Bomberman.vcxproj", "{C5AF2BC1-67A4-4589-82C6-8EA76D3573EA}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bomberman", "Bomberman\Bomb
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FreeType", "dependencies\FreeType\FreeType.vcxproj", "{1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "dependencies\glfw\glfw.vcxproj", "{2F41D510-E68A-3896-A511-240B73B4D0F8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMod", "TestMod\TestMod.vcxproj", "{DDF7A917-EDD6-41A7-A15B-B9B9D10C1266}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -27,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLogic", "GameLogic\Game
 		{2F41D510-E68A-3896-A511-240B73B4D0F8} = {2F41D510-E68A-3896-A511-240B73B4D0F8}
 		{1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7} = {1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "dependencies\glfw\glfw.vcxproj", "{2F41D510-E68A-3896-A511-240B73B4D0F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,18 +72,6 @@ Global
 		{1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{1B0BC2C5-1A09-4017-BDF5-9F9C1718BFE7}.RelWithDebInfo|x86.Build.0 = Release|Win32
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x64.ActiveCfg = Debug|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x64.Build.0 = Debug|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x86.ActiveCfg = Debug|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x64.ActiveCfg = Release|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x64.Build.0 = Release|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x86.ActiveCfg = Release|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
-		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
 		{DDF7A917-EDD6-41A7-A15B-B9B9D10C1266}.Debug|x64.ActiveCfg = Debug|x64
 		{DDF7A917-EDD6-41A7-A15B-B9B9D10C1266}.Debug|x64.Build.0 = Debug|x64
 		{DDF7A917-EDD6-41A7-A15B-B9B9D10C1266}.Debug|x86.ActiveCfg = Debug|Win32
@@ -132,6 +120,18 @@ Global
 		{20D63A30-D68E-40F3-B05C-9A71F708A720}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{20D63A30-D68E-40F3-B05C-9A71F708A720}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{20D63A30-D68E-40F3-B05C-9A71F708A720}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x64.ActiveCfg = Debug|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x64.Build.0 = Debug|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Debug|x86.ActiveCfg = Debug|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x64.ActiveCfg = Release|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x64.Build.0 = Release|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.Release|x86.ActiveCfg = Release|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{2F41D510-E68A-3896-A511-240B73B4D0F8}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
