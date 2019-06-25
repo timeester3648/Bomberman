@@ -64,7 +64,7 @@ texture_atlas_new( const size_t width,
     self->width = width;
     self->height = height;
     self->depth = depth;
-    self->id = 0;
+    self->vbo = 0;
 	self->dirty = 0;
 
     vector_push_back( self->nodes, &node );
@@ -92,7 +92,7 @@ texture_atlas_delete( texture_atlas_t *self )
     {
         free( self->data );
     }
-    if( self->id )
+    if( self->vbo )
     {
         // SP: glDeleteTextures( 1, &self->id );
     }

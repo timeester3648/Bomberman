@@ -11,7 +11,7 @@
 #include <EOUL/Image.hpp>
 #include <EOUL/String.hpp>
 #include <EOUL/Parser.hpp>
-#include <EOUL/Window.hpp>
+//#include <EOUL/Window.hpp>
 #include <EOUL/Process.hpp>
 #include <EOUL/Constants.hpp>
 

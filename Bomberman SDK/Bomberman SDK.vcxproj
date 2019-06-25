@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)dependencies\EOUL-OpenAL\lib\include\;$(SolutionDir)dependencies\EOUL-GLFW\lib\include\;$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -82,7 +82,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)dependencies\EOUL-OpenAL\lib\include\;$(SolutionDir)dependencies\EOUL-GLFW\lib\include\;$(SolutionDir)GameLogic\header\;$(ProjectDir)header\;$(ProjectDir)header\include\;$(SolutionDir)lib\include\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -130,7 +130,7 @@ typedef struct texture_atlas_t
     /**
      * Texture identity (OpenGL)
      */
-    unsigned int id;
+    unsigned int vbo;
 
     /**
      * Atlas data

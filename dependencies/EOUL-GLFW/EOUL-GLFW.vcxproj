@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{EB848954-40BD-42CA-B931-A8693B2EA9CD}</ProjectGuid>
+    <RootNamespace>Bomberman</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)lib\include\;D:\Program Files (x86)\OpenAL 1.1 SDK\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\;D:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)lib\include\;D:\Program Files (x86)\OpenAL 1.1 SDK\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\;D:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)dependencies\glfw\include\;$(ProjectDir)lib\include\;$(SolutionDir)lib\include\;D:\Program Files (x86)\OpenAL 1.1 SDK\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\;D:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)dependencies\glfw\include\;$(ProjectDir)lib\include\;$(SolutionDir)lib\include\;D:\Program Files (x86)\OpenAL 1.1 SDK\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)x64\Release\;$(SolutionDir)lib\;D:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SimpleAudioLibrary.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SimpleAudioLibrary.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SimpleAudioLibrary.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_WINDOWS;NDEBUG;_GLFW_USE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Coding\C++\C++ Libraries\glfw\glfw\include;D:\Coding\C++\C++ Libraries\glfw\glfw\src;D:\Coding\C++\C++ Libraries\glfw\glfw\build_vs14_win64\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>freetype-gl.lib;freetype.lib;SimpleAudioLibrary.lib;EOUL Static.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;</AdditionalDependencies>
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\include\display\DisplayManager.h" />
+    <ClInclude Include="lib\include\display\render\ButtonRenderer.h" />
+    <ClInclude Include="lib\include\display\render\InfoPaneRenderer.h" />
+    <ClInclude Include="lib\include\display\render\Renderer.h" />
+    <ClInclude Include="lib\include\display\render\StaticImageRenderer.h" />
+    <ClInclude Include="lib\include\display\render\TextRenderer.h" />
+    <ClInclude Include="lib\include\display\Window.h" />
+    <ClInclude Include="header\freetype-gl\common.h" />
+    <ClInclude Include="header\freetype-gl\freetype-gl.h" />
+    <ClInclude Include="header\freetype-gl\opengl.h" />
+    <ClInclude Include="header\freetype-gl\platform.h" />
+    <ClInclude Include="header\freetype-gl\texture-atlas.h" />
+    <ClInclude Include="header\freetype-gl\texture-font.h" />
+    <ClInclude Include="header\freetype-gl\vec234.h" />
+    <ClInclude Include="header\freetype-gl\vector.h" />
+    <ClInclude Include="library source\freetype-gl\common.h" />
+    <ClInclude Include="library source\freetype-gl\freetype-gl.h" />
+    <ClInclude Include="library source\freetype-gl\opengl.h" />
+    <ClInclude Include="library source\freetype-gl\platform.h" />
+    <ClInclude Include="library source\freetype-gl\texture-atlas.h" />
+    <ClInclude Include="library source\freetype-gl\texture-font.h" />
+    <ClInclude Include="library source\freetype-gl\vec234.h" />
+    <ClInclude Include="library source\freetype-gl\vector.h" />
+    <ClInclude Include="lib\freetype\config\ftconfig.h" />
+    <ClInclude Include="lib\freetype\config\ftheader.h" />
+    <ClInclude Include="lib\freetype\config\ftmodule.h" />
+    <ClInclude Include="lib\freetype\config\ftoption.h" />
+    <ClInclude Include="lib\freetype\config\ftstdlib.h" />
+    <ClInclude Include="lib\freetype\freetype.h" />
+    <ClInclude Include="lib\freetype\ftadvanc.h" />
+    <ClInclude Include="lib\freetype\ftbbox.h" />
+    <ClInclude Include="lib\freetype\ftbdf.h" />
+    <ClInclude Include="lib\freetype\ftbitmap.h" />
+    <ClInclude Include="lib\freetype\ftbzip2.h" />
+    <ClInclude Include="lib\freetype\ftcache.h" />
+    <ClInclude Include="lib\freetype\ftchapters.h" />
+    <ClInclude Include="lib\freetype\ftcid.h" />
+    <ClInclude Include="lib\freetype\fterrdef.h" />
+    <ClInclude Include="lib\freetype\fterrors.h" />
+    <ClInclude Include="lib\freetype\ftgasp.h" />
+    <ClInclude Include="lib\freetype\ftglyph.h" />
+    <ClInclude Include="lib\freetype\ftgxval.h" />
+    <ClInclude Include="lib\freetype\ftgzip.h" />
+    <ClInclude Include="lib\freetype\ftimage.h" />
+    <ClInclude Include="lib\freetype\ftincrem.h" />
+    <ClInclude Include="lib\freetype\ftlcdfil.h" />
+    <ClInclude Include="lib\freetype\ftlist.h" />
+    <ClInclude Include="lib\freetype\ftlzw.h" />
+    <ClInclude Include="lib\freetype\ftmac.h" />
+    <ClInclude Include="lib\freetype\ftmm.h" />
+    <ClInclude Include="lib\freetype\ftmodapi.h" />
+    <ClInclude Include="lib\freetype\ftmoderr.h" />
+    <ClInclude Include="lib\freetype\ftotval.h" />
+    <ClInclude Include="lib\freetype\ftoutln.h" />
+    <ClInclude Include="lib\freetype\ftpfr.h" />
+    <ClInclude Include="lib\freetype\ftrender.h" />
+    <ClInclude Include="lib\freetype\ftsizes.h" />
+    <ClInclude Include="lib\freetype\ftsnames.h" />
+    <ClInclude Include="lib\freetype\ftstroke.h" />
+    <ClInclude Include="lib\freetype\ftsynth.h" />
+    <ClInclude Include="lib\freetype\ftsystem.h" />
+    <ClInclude Include="lib\freetype\fttrigon.h" />
+    <ClInclude Include="lib\freetype\fttypes.h" />
+    <ClInclude Include="lib\freetype\ftwinfnt.h" />
+    <ClInclude Include="lib\freetype\ftxf86.h" />
+    <ClInclude Include="lib\freetype\internal\autohint.h" />
+    <ClInclude Include="lib\freetype\internal\ftcalc.h" />
+    <ClInclude Include="lib\freetype\internal\ftdebug.h" />
+    <ClInclude Include="lib\freetype\internal\ftdriver.h" />
+    <ClInclude Include="lib\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="lib\freetype\internal\ftmemory.h" />
+    <ClInclude Include="lib\freetype\internal\ftobjs.h" />
+    <ClInclude Include="lib\freetype\internal\ftpic.h" />
+    <ClInclude Include="lib\freetype\internal\ftrfork.h" />
+    <ClInclude Include="lib\freetype\internal\ftserv.h" />
+    <ClInclude Include="lib\freetype\internal\ftstream.h" />
+    <ClInclude Include="lib\freetype\internal\fttrace.h" />
+    <ClInclude Include="lib\freetype\internal\ftvalid.h" />
+    <ClInclude Include="lib\freetype\internal\internal.h" />
+    <ClInclude Include="lib\freetype\internal\pshints.h" />
+    <ClInclude Include="lib\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="lib\freetype\internal\services\svcid.h" />
+    <ClInclude Include="lib\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="lib\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="lib\freetype\internal\services\svkern.h" />
+    <ClInclude Include="lib\freetype\internal\services\svmm.h" />
+    <ClInclude Include="lib\freetype\internal\services\svotval.h" />
+    <ClInclude Include="lib\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="lib\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="lib\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="lib\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="lib\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="lib\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="lib\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="lib\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="lib\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="lib\freetype\internal\services\svxf86nm.h" />
+    <ClInclude Include="lib\freetype\internal\sfnt.h" />
+    <ClInclude Include="lib\freetype\internal\t1types.h" />
+    <ClInclude Include="lib\freetype\internal\tttypes.h" />
+    <ClInclude Include="lib\freetype\t1tables.h" />
+    <ClInclude Include="lib\freetype\ttnameid.h" />
+    <ClInclude Include="lib\freetype\tttables.h" />
+    <ClInclude Include="lib\freetype\tttags.h" />
+    <ClInclude Include="lib\freetype\ttunpat.h" />
+    <ClInclude Include="lib\include\EOUL-GLFW.h" />
+    <ClInclude Include="lib\include\EOUL-GLFW\Window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

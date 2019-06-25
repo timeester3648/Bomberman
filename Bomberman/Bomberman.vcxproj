@@ -78,11 +78,11 @@
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)dependencies\EOUL-OpenAL\lib\include\;$(SolutionDir)dependencies\EOUL-GLFW\lib\include\;$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)dependencies\EOUL-OpenAL\lib\include\;$(SolutionDir)dependencies\EOUL-GLFW\lib\include\;$(SolutionDir)GameLogic\header\;$(SolutionDir)lib\include\;$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(SolutionDir)lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -123,7 +123,7 @@
       <AdditionalIncludeDirectories />
     </ClCompile>
     <Link>
-      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;EOUL Static.lib;Ws2_32.lib;Winmm.lib;glu32.lib;freetype.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GameLogic.lib;EOUL-GLFW.lib;EOUL-OpenAL.lib;enet.lib;Ws2_32.lib;Winmm.lib;freetype-gl.lib;freetype.lib;OpenAL32.lib;glu32.lib;glew32s.lib;glfw3.lib;openGL32.lib;User32.lib;Gdi32.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
