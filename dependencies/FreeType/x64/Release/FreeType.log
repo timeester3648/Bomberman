@@ -1,1 +1,56 @@
-﻿  FreeType.vcxproj -> D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\x64\Release\FreeType.lib
+﻿  platform.c
+  texture-atlas.c
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(53,1): warning C4267:  'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(133,40): warning C4090:  '=': different 'const' qualifiers
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(165,23): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(240,29): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(241,19): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(266,32): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(267,20): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(223,1): warning C4267:  'initializing': conversion from 'size_t' to 'int', possible loss of data
+  texture-font.c
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-atlas.c(315,27): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+  vector.c
+  autofit.c
+  ftbase.c
+  ftbbox.c
+  ftbitmap.c
+  ftdebug.c
+  ftfstype.c
+  ftgasp.c
+  ftglyph.c
+  ftgxval.c
+  ftinit.c
+  ftlcdfil.c
+  ftmm.c
+  ftotval.c
+  ftpatent.c
+  ftpfr.c
+  ftstroke.c
+  Compiling...
+  ftsynth.c
+  ftsystem.c
+  fttype1.c
+  ftwinfnt.c
+  ftxf86.c
+  bdf.c
+  ftcache.c
+  cff.c
+  type1cid.c
+  ftgzip.c
+  ftlzw.c
+  pcf.c
+  pfr.c
+  psaux.c
+  pshinter.c
+  psmodule.c
+  raster.c
+  sfnt.c
+  smooth.c
+  truetype.c
+  Compiling...
+  type1.c
+  type42.c
+  winfnt.c
+D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\dependencies\FreeType\freetype-gl\texture-font.c(93,49): warning C4267:  'function': conversion from 'size_t' to 'FT_Long', possible loss of data
+  FreeType.vcxproj -> D:\Coding\C++\C++ Workspace Visual Studio\Bomberman\x64\Release\FreeType.lib

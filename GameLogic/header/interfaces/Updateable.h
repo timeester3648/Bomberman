@@ -6,4 +6,8 @@ class GAME_LOGIC_API_CPP Updateable {
 
 		virtual void update() = 0;
 
+	public:
+
+		virtual ~Updateable() = default;
+
 };
